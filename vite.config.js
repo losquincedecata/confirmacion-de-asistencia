@@ -8,5 +8,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/cumple-de-cata/', // ¡Reemplaza por el nombre real de tu repo!
+  base: '/confirmacion-de-asistencia', // ¡Reemplaza por el nombre real de tu repo!
 })
