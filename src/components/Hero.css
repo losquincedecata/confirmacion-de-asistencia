@@ -1,0 +1,63 @@
+.hero-container {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: sans-serif;
+}
+
+.countdown-text {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.flip-clock {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Espacio entre los días y las horas */
+}
+
+.flip-card {
+  background-color: #1a1a1a; /* Color oscuro como el de tu foto */
+  color: white;
+  padding: 20px;
+  border-radius: 8px; /* Bordes redondeados */
+  min-width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Esta es la rayita horizontal que simula el corte de la tarjeta "flip" */
+.flip-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.number {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1;
+  z-index: 1; /* Para que el número quede por encima de la rayita */
+}
+
+.label {
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #cccccc;
+}
+
+
+/* El fondo de las tarjetas: Buscá la clase .flip-card y cambiá background-color: #1a1a1a; por el código del color que prefieras (podés usar colores en inglés como pink o códigos hexadecimales como #ffb6c1).
+
+El color de los números y letras: En esa misma clase .flip-card, cambiá color: white; por el tono que haga mejor contraste.
+
+La línea del medio: Buscá .flip-card::after y ajustá el background-color: rgba(0, 0, 0, 0.6); si querés que la línea divisoria (el efecto "flip") sea más clara, más oscura o de otro color. */
