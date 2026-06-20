@@ -75,3 +75,32 @@ div {
   text-transform: uppercase;
   text-align: center;
 }
+
+/* Aseguramos que nada se salga de la pantalla */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ajustes para pantallas pequeñas (Celulares) */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px; /* Tamaño base estándar para lectura */
+  }
+
+  /* Ajustamos los títulos elegantes para que no se corten */
+  .estilo-elegante h2 {
+    font-size: 2.2rem !important; /* Más chico para que no ocupe toda la pantalla */
+    margin-bottom: 15px;
+  }
+
+  /* Hacemos que las tarjetas (Location, RSVP, etc) aprovechen el ancho */
+  .location-content, 
+  .dresscode-content, 
+  .gifts-content, 
+  .rsvp-content,
+  .event-details-container {
+    max-width: 90%; /* Ocupa el 90% de la pantalla */
+    padding: 20px !important; /* Menos margen interno para ahorrar espacio */
+  }
+}
