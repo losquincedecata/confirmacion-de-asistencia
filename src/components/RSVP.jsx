@@ -27,6 +27,7 @@ function RSVP() {
 
   return (
     <section className="rsvp-container">
+      <div className='rsvp-content'>
       <h2>Confirmar Asistencia</h2>
       <p className="rsvp-subtitle">
         Por favor, confirmá tu presencia para que pueda organizar todo de la mejor manera.
@@ -77,6 +78,7 @@ function RSVP() {
             <button type="submit" className="btn-enviar">Confirmar</button>
           </form>
         )}
+      </div>
       </div>
     </section>
   );

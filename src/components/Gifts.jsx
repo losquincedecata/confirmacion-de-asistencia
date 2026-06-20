@@ -1,64 +1,53 @@
+import { useState } from 'react';
 import './Gifts.css';
 
-function Gifts() {
-  // Aquí puedes agregar, quitar o modificar todos los regalos que quieras.
-  // Solo asegúrate de cambiar el "link" por el que te dé Mercado Pago.
-  const regalos = [
-    {
-      id: 1,
-      titulo: "Cabalgata por la playa",
-      monto: "$15.000",
-      icono: "🐎",
-      link: "https://link.mercadopago.com.ar/ejemplo3"
-    },
-    {
-      id: 2,
-      titulo: "Balde de Nutella",
-      monto: "$30.000",
-      icono: "🍫",
-      link: "https://link.mercadopago.com.ar/ejemplo1" 
-    },
-    {
-      id: 3,
-      titulo: "Oso Panda Gigante",
-      monto: "$40.000",
-      icono: "🐼",
-      link: "https://link.mercadopago.com.ar/ejemplo2"
-    },
-    {
-      id: 4,
-      titulo: "Financiar mi viaje a la luna",
-      monto: "$50.000",
-      icono: "🚀",
-      link: "https://link.mercadopago.com.ar/ejemplo3"
-    },
+const regalos = [
+  { id: 1, titulo: "Cabalgata por la playa", monto: "$15.000", icono: "🐎", alias: "micaela.za", cvu:"0000003100015137881806" },
+  { id: 2, titulo: "Balde de Nutella", monto: "$30.000", icono: "🍫", alias: "micaela.za", cvu:"0000003100015137881806" },
+  { id: 3, titulo: "Oso Panda Gigante", monto: "$50.000", icono: "🐼", alias: "micaela.za", cvu:"0000003100015137881806" },
+  { id: 4, titulo: "Financiar mi viaje a la luna", monto: "$100.000", icono: "🚀", alias: "micaela.za", cvu:"0000003100015137881806" },
+];
 
-  ];
+function Gifts() {
+  const [modalAbierto, setModalAbierto] = useState(false);
+  const [regaloSeleccionado, setRegaloSeleccionado] = useState(null);
+
+  const abrirModal = (regalo) => {
+    setRegaloSeleccionado(regalo);
+    setModalAbierto(true);
+  };
 
   return (
-    <section className="gifts-container">
-      <h2>Mesa de Regalos</h2>
-      <p className="gifts-subtitle">
-        Tu presencia es mi mejor regalo, pero si querés podes elegir alguno de los siguientes regalos:
-      </p>
-
-      <div className="gifts-grid">
+    <section className="seccion-regalos">
+      <div className='gifts-content'>
+      <h2>Regalos</h2>
+      <p>Lo más importante es tu presencia, pero te dejo algunas ideas... </p>
+      <br></br>
+      <div className="grilla-regalos">
         {regalos.map((regalo) => (
-          <div key={regalo.id} className="gift-card">
-            <span className="gift-icon">{regalo.icono}</span>
+          <button key={regalo.id} onClick={() => abrirModal(regalo)} className="btn-regalo">
+            <span>{regalo.icono}</span>
             <h3>{regalo.titulo}</h3>
-            <p className="gift-amount">{regalo.monto}</p>
-            <a 
-              href={regalo.link} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="btn-mercadopago"
-            >
-              Regalar 🎁
-            </a>
-          </div>
+            <p>{regalo.monto}</p>
+          </button>
         ))}
       </div>
+
+      {modalAbierto && (
+        <div className="modal-overlay" onClick={() => setModalAbierto(false)}>
+          <div className="modal-contenido" onClick={(e) => e.stopPropagation()}>
+            <h3>{regaloSeleccionado.titulo}</h3>
+            <p>Monto sugerido: <strong>{regaloSeleccionado.monto}</strong></p>
+            <p>Datos para transferencia:</p>
+            <div className="caja-alias">
+              <p>Alias: <strong>{regaloSeleccionado.alias}</strong></p>
+              <p>CVU: <strong>{regaloSeleccionado.cvu}</strong></p>
+            </div>
+            <button onClick={() => setModalAbierto(false)} className="btn-cerrar">Cerrar</button>
+          </div>
+        </div>
+      )}
+    </div>
     </section>
   );
 }

@@ -1,0 +1,26 @@
+/* Global.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Special+Elite&display=swap');
+
+/* Reset básico para que nada tenga márgenes raros */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh; /* Ocupa al menos toda la pantalla */
+}
+
+body {
+  background-image: url('./assets/fondo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+}
+
+h1, h2, h3, p, div {
+  font-family: 'Special Elite', cursive;
+  text-transform: uppercase;
+  text-align: center;
+}

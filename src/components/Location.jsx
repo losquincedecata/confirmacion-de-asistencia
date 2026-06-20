@@ -6,7 +6,7 @@ function Location() {
 
   return (
     <section className="location-container">
-      {/* <h2>Ubicación</h2> */}
+      <div className="location-content">
       <p className="salon-name">Flox Recepciones</p>
       <p className="address">Diego Pombo 511, San Andrés, en el Partido de General San Martín</p>
 
@@ -27,6 +27,7 @@ function Location() {
       <a href={linkComoLlegar} target="_blank" rel="noopener noreferrer" className="btn-llegar">
         📍 ¿Cómo llegar?
       </a>
+    </div>
     </section>
   );
 }
