@@ -3,6 +3,9 @@ import './RSVP.css';
 
 function RSVP() {
   const [enviado, setEnviado] = useState(false);
+  // Estado para capturar la asistencia y el tipo de menú
+  const [asistencia, setAsistencia] = useState('');
+  const [menu, setMenu] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -10,7 +13,6 @@ function RSVP() {
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
 
-    // REEMPLAZA EL LINK DE ABAJO POR TU API DE SHEETDB
     fetch('https://sheetdb.io/api/v1/b7zky2nn9xx1q', {
       method: 'POST',
       headers: {
@@ -44,31 +46,44 @@ function RSVP() {
 
               <div className="form-group">
                 <label htmlFor="nombre">Nombre y Apellido</label>
-                <input type="text" id="nombre" name="Nombre" required placeholder="Ej: Lionel Messi" />
+                <input type="text" id="nombre" name="Nombre" required placeholder="Ej: Osito Gominola" />
               </div>
 
               <div className="form-group">
                 <p className="label-text">¿Vas a poder venir?</p>
                 <label className="radio-label">
-                  <input type="radio" name="Asistencia" value="Sí, asistiré!" required />
+                  <input type="radio" name="Asistencia" value="Sí, asistiré!" required 
+                    onChange={(e) => setAsistencia(e.target.value)} />
                   Sí, ¡asistiré! 🥳
                 </label>
                 <label className="radio-label">
-                  <input type="radio" name="Asistencia" value="No puedo ir" required />
+                  <input type="radio" name="Asistencia" value="No puedo ir" required 
+                    onChange={(e) => setAsistencia(e.target.value)} />
                   No puedo ir 😢
                 </label>
               </div>
 
-              <div className="form-group">
-                <p className="label-text">Consideraciones sobre el menú:</p>
-                <select name="Menu" required className="select-input" defaultValue="">
-                  <option value="" disabled>Elegí una opción...</option>
-                  <option value="Ninguna">Ninguna (Como de todo)</option>
-                  <option value="Sin TACC">Sin TACC</option>
-                  <option value="Sin sal">Sin sal</option>
-                  <option value="Vegetariano">Vegetariano</option>
-                </select>
-              </div>
+              {/* Solo mostramos el menú si la asistencia es 'Sí' */}
+              {asistencia === 'Sí, asistiré!' && (
+                <div className="form-group">
+                  <p className="label-text">Consideraciones sobre el menú:</p>
+                  <select name="Menu" required className="select-input" value={menu} onChange={(e) => setMenu(e.target.value)}>
+                    <option value="" disabled>Elegí una opción...</option>
+                    <option value="Ninguna">Ninguna (Como de todo)</option>
+                    <option value="Sin TACC">Sin TACC</option>
+                    <option value="Sin sal">Sin sal</option>
+                    <option value="Vegetariano">Vegetariano</option>
+                    <option value="Vegano">Vegano</option>
+                    <option value="Diabetico">Diabetico</option>
+                    <option value="Otro">Otro (Escribir abajo)</option>
+                  </select>
+
+                  {/* Campo extra si seleccionan 'Otro' */}
+                  {menu === 'Otro' && (
+                    <input type="text" name="OtroMenu" required placeholder="Especificá tu preferencia" style={{ marginTop: '10px' }} className="select-input" />
+                  )}
+                </div>
+              )}
 
               <div className="form-group">
                 <label htmlFor="comentarios">Comentarios o Mensaje:</label>
