@@ -1,22 +1,27 @@
 .rsvp-container {
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px 20px; /* Reduje el padding para que sea consistente con los otros bloques */
   font-family: sans-serif;
+  width: 100%;       /* Asegura que el contenedor ocupe el ancho disponible */
+  box-sizing: border-box;
 }
 
 .rsvp-content {
+  width: 92%;        /* Estandarizado para móvil */
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0 auto;    /* Centrado automático */
   padding: 30px;
   border: 2px solid #f0f0f0;
   border-radius: 15px;
   background-color: #fafafa;
+  box-sizing: border-box; /* Asegura que el padding no desborde */
 }
 
-.rsvp-container h2 {
-  font-size: 2rem;
+.rsvp-content h2 {
+  font-family: 'Parisienne', cursive !important;
+  font-size: 3.5rem !important;
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .rsvp-subtitle {

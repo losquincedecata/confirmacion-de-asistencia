@@ -3,17 +3,23 @@
   padding: 50px 20px;
 }
 
-/* Esta es la "tarjeta" que debe llevar el fondo */
 .dresscode-content {
+  width: 90%;             /* Ahora igual que los demás */
   max-width: 500px;
   margin: 0 auto;
   padding: 30px;
   border: 2px solid #f0f0f0;
-  /* Mismo borde que Location[cite: 6] */
   border-radius: 15px;
-  /* Mismo redondeado[cite: 6] */
   background-color: #fafafa;
-  /* Fondo claro aplicado[cite: 1, 6] */
+  box-sizing: border-box; /* Importante para que el padding no rompa el ancho */
+}
+
+/* Agregamos el estilo de título elegante que faltaba */
+.dresscode-content h2 {
+  font-family: 'Parisienne', cursive !important;
+  font-size: 3.5rem !important;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .dresscode-icon {

@@ -9,6 +9,13 @@
   background-color: #fafafa;
 }
 
+.event-details-container h2 {
+  font-family: 'Parisienne', cursive !important;
+  font-size: 3.5rem !important;
+  color: #333;
+  margin-bottom: 20px;
+}
+
 /* Título de la fecha dentro del contenedor */
 .event-details-container p {
   font-size: 1.2rem;
