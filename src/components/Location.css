@@ -9,7 +9,7 @@
   color: #333;
 }
 
-.location-content{
+.location-content {
   max-width: 500px;
   margin: 0 auto;
   padding: 30px;
@@ -31,17 +31,20 @@
 
 .map-wrapper {
   width: 100%;
-  max-width: 600px; /* Para que no se vea gigante en computadoras */
+  max-width: 600px;
+  /* Para que no se vea gigante en computadoras */
   height: 300px;
   margin: 0 auto 30px auto;
-  border-radius: 12px; /* Bordes redondeados del mapa */
-  overflow: hidden; /* Esto asegura que el mapa respete los bordes redondeados */
+  border-radius: 12px;
+  /* Bordes redondeados del mapa */
+  overflow: hidden;
+  /* Esto asegura que el mapa respete los bordes redondeados */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btn-llegar {
   display: inline-block;
-  background-color: #a66c6c; 
+  background-color: #a66c6c;
   color: white;
   border: 2px solid white;
   text-decoration: none;
@@ -57,5 +60,3 @@
 .btn-llegar:hover {
   background-color: #834444;
 }
-
-

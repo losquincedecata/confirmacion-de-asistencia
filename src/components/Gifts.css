@@ -5,7 +5,7 @@
   font-family: sans-serif;
 }
 
-.gifts-content{
+.gifts-content {
   max-width: 500px;
   margin: 0 auto;
   padding: 30px;
@@ -51,13 +51,17 @@
 .gift-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  border-color: #009ee3; 
+  border-color: #009ee3;
 }
 
 
-.gift-icon {
-  font-size: 3rem;
-  margin-bottom: 15px;
+.gift-icon-img {
+  width: 80px;
+  /* Tamaño ajustable según prefieras */
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+  /* Centrado y con espacio hacia abajo[cite: 1, 2] */
 }
 
 .gift-card h3 {
@@ -86,6 +90,7 @@
 .btn-mercadopago:hover {
   background-color: #0084bd;
 }
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -113,4 +118,19 @@
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 8px;
-} 
+}
+
+/* Reseteamos la fuente para que las cajitas vuelvan a Montserrat */
+.gifts-content .btn-regalo,
+.gifts-content .btn-regalo h3,
+.gifts-content .btn-regalo p,
+.gifts-content p {
+  font-family: 'Montserrat', sans-serif !important;
+  text-transform: none;
+  /* O uppercase, según prefieras */
+}
+
+/* Aseguramos que el título principal SÍ mantenga la fuente elegante */
+.gifts-content h2 {
+  font-family: 'Parisienne', cursive !important;
+}

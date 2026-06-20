@@ -27,33 +27,38 @@
 }
 
 .form-wrapper {
-  max-width: 500px; /* Un poco más angosto para que quede más elegante */
+  max-width: 500px;
+  /* Un poco más angosto para que quede más elegante */
   margin: 0 auto;
   background-color: white;
   border-radius: 12px;
   padding: 40px 30px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  text-align: left; /* Alineamos los textos del formulario a la izquierda */
+  text-align: left;
+  /* Alineamos los textos del formulario a la izquierda */
 }
 
 .form-group {
   margin-bottom: 25px;
 }
 
-label, .label-text {
+label,
+.label-text {
   display: block;
   font-weight: bold;
   margin-bottom: 8px;
   color: #333;
 }
 
-input[type="text"], .select-input {
+input[type="text"],
+.select-input {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
-  box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
+  box-sizing: border-box;
+  /* Asegura que el padding no rompa el ancho */
   font-family: inherit;
 }
 
@@ -69,7 +74,8 @@ input[type="text"], .select-input {
 .btn-enviar {
   display: inline-block;
   width: 100%;
-  background-color: #a66c6c; /* Combina con el botón del mapa */
+  background-color: #a66c6c;
+  /* Combina con el botón del mapa */
   color: white;
   border: 2px solid white;
   padding: 15px;
@@ -87,5 +93,8 @@ input[type="text"], .select-input {
   background-color: #834444;
 }
 
-.mensaje-exito { text-align: center; color: #834444; padding: 20px; }
-
+.mensaje-exito {
+  text-align: center;
+  color: #834444;
+  padding: 20px;
+}

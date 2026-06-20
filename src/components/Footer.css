@@ -1,6 +1,7 @@
 .footer-container {
   text-align: center;
-  background-color: #a66c6c; /* Un color oscuro para cerrar elegante */
+  background-color: #a66c6c;
+  /* Un color oscuro para cerrar elegante */
   color: white;
   padding: 40px 20px 20px 20px;
   display: flex;

@@ -13,14 +13,17 @@
 .flip-clock {
   display: flex;
   justify-content: center;
-  gap: 15px; /* Espacio entre los días y las horas */
+  gap: 15px;
+  /* Espacio entre los días y las horas */
 }
 
 .flip-card {
-  background-color: #1a1a1a; /* Color oscuro como el de tu foto */
+  background-color: #1a1a1a;
+  /* Color oscuro como el de tu foto */
   color: white;
   padding: 20px;
-  border-radius: 8px; /* Bordes redondeados */
+  border-radius: 8px;
+  /* Bordes redondeados */
   min-width: 90px;
   display: flex;
   flex-direction: column;
@@ -44,7 +47,8 @@
   font-size: 3.5rem;
   font-weight: bold;
   line-height: 1;
-  z-index: 1; /* Para que el número quede por encima de la rayita */
+  z-index: 1;
+  /* Para que el número quede por encima de la rayita */
 }
 
 .label {

@@ -1,16 +1,19 @@
 .dresscode-container {
   text-align: center;
   padding: 50px 20px;
-  /* background-color: #fff; */
 }
 
+/* Esta es la "tarjeta" que debe llevar el fondo */
 .dresscode-content {
   max-width: 500px;
   margin: 0 auto;
   padding: 30px;
   border: 2px solid #f0f0f0;
+  /* Mismo borde que Location[cite: 6] */
   border-radius: 15px;
+  /* Mismo redondeado[cite: 6] */
   background-color: #fafafa;
+  /* Fondo claro aplicado[cite: 1, 6] */
 }
 
 .dresscode-icon {
@@ -25,12 +28,16 @@
   margin-bottom: 10px;
 }
 
-.titulo.h2 {
-    color: #333;
-
-}
-
 .dresscode-content p {
   color: #666;
   line-height: 1.5;
+}
+
+.dresscode-icon-img {
+  width: 150px;
+  /* Ajustá el tamaño a tu gusto */
+  height: auto;
+  display: block;
+  margin: 0 auto 15px auto;
+  /* Centra la imagen y le da espacio abajo */
 }

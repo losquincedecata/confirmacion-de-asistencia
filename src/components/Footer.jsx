@@ -10,12 +10,12 @@ function Footer() {
   };
 
   return (
-    <footer className="footer-container">
+    <footer className="footer-container estilo-elegante">
       <div className="banner-final">
         <h2>¡Te espero!</h2>
         <h2> Cata 💕</h2>
       </div>
-      
+
       <button className="btn-up" onClick={scrollToTop}>
         ⬆ Subir al inicio
       </button>
