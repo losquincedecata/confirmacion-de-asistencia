@@ -85,44 +85,99 @@ img {
 /* Ajustes para pantallas pequeñas (Celulares) */
 @media (max-width: 600px) {
   body {
-    font-size: 16px; /* Tamaño base estándar para lectura */
+    font-size: 16px;
+    /* Tamaño base estándar para lectura */
   }
 
   /* Ajustamos los títulos elegantes para que no se corten */
   .estilo-elegante h2 {
-    font-size: 2.2rem !important; /* Más chico para que no ocupe toda la pantalla */
+    font-size: 2.2rem !important;
+    /* Más chico para que no ocupe toda la pantalla */
     margin-bottom: 15px;
   }
 
   /* Hacemos que las tarjetas (Location, RSVP, etc) aprovechen el ancho */
-  .location-content, 
-  .dresscode-content, 
-  .gifts-content, 
+  .location-content,
+  .dresscode-content,
+  .gifts-content,
   .rsvp-content,
   .event-details-container {
-    max-width: 90%; /* Ocupa el 90% de la pantalla */
-    padding: 20px !important; /* Menos margen interno para ahorrar espacio */
+    max-width: 90%;
+    /* Ocupa el 90% de la pantalla */
+    padding: 20px !important;
+    /* Menos margen interno para ahorrar espacio */
   }
 }
 
 /* Aseguramos que todas las tarjetas se centren y se adapten */
-.event-details-container, 
+.event-details-container,
 .dresscode-content {
-  width: 92%;           /* En lugar de un ancho fijo, usamos porcentaje */
-  max-width: 500px;     /* Pero no dejamos que pase de 500px en PC */
-  margin: 20px auto;    /* Esto centra automáticamente */
-  box-sizing: border-box; /* Importante para que el padding no desborde */
+  width: 92%;
+  /* En lugar de un ancho fijo, usamos porcentaje */
+  max-width: 500px;
+  /* Pero no dejamos que pase de 500px en PC */
+  margin: 20px auto;
+  /* Esto centra automáticamente */
+  box-sizing: border-box;
+  /* Importante para que el padding no desborde */
 }
 
 /* Evitamos que el título se parta en dos renglones */
 .dresscode-content h3 {
-  white-space: nowrap;  /* Fuerza a que el texto no salte de línea */
-  font-size: 1.3rem;    /* Un poquito más chico para que entre en pantallas chicas */
+  white-space: nowrap;
+  /* Fuerza a que el texto no salte de línea */
+  font-size: 1.3rem;
+  /* Un poquito más chico para que entre en pantallas chicas */
 }
 
-.dresscode-icon-img, .party-icon-img {
-  max-width: 100%;      /* La imagen nunca será más ancha que su contenedor */
+.dresscode-icon-img,
+.party-icon-img {
+  max-width: 100%;
+  /* La imagen nunca será más ancha que su contenedor */
   height: auto;
   display: block;
   margin: 0 auto 15px auto;
+}
+
+/* Animación de flotación suave */
+@keyframes flotar {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Aplicamos la animación a los iconos */
+
+/* Animación de latido suave */
+@keyframes latido {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.party-icon-img,
+.footer-image,
+.dresscode-icon-img,
+.gift-icon-img {
+  width: 80px;
+  /* Ajustá el tamaño a tu gusto */
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  animation: latido 2s ease-in-out infinite;
+  /* El 'infinite' hace que nunca pare */
 }

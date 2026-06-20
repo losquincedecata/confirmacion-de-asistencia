@@ -27,7 +27,7 @@ function Location() {
         </div>
 
         <a href={linkComoLlegar} target="_blank" rel="noopener noreferrer" className="btn-llegar">
-          📍 ¿Cómo llegar?
+          ¿Cómo llegar?
         </a>
       </div>
     </section>
