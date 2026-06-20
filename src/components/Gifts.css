@@ -6,19 +6,25 @@
 }
 
 .gifts-content {
-  width: 92%; /* Ajuste para móvil: ocupa el 92% del ancho */
+  width: 92%;
+  /* Todos igual */
   max-width: 500px;
-  margin: 0 auto; /* Centrado automático */
+  /* Todos igual */
+  margin: 20px auto;
+  /* Todos igual */
   padding: 30px;
+  /* ¡Muy importante que el padding sea igual! */
+  box-sizing: border-box;
+  /* Esto evita que el padding "hinche" la tarjeta */
   border: 2px solid #f0f0f0;
   border-radius: 15px;
   background-color: #fafafa;
-  box-sizing: border-box; /* Asegura que el padding no desborde el ancho */
 }
 
 .gifts-content h2 {
   font-family: 'Parisienne', cursive !important;
-  font-size: 3.5rem !important; /* Estilo elegante aplicado */
+  font-size: 3.5rem !important;
+  /* Estilo elegante aplicado */
   color: #333;
   margin-bottom: 10px;
 }
@@ -43,7 +49,8 @@
   border: 2px dashed #ccc;
   border-radius: 15px;
   padding: 20px 10px;
-  width: 100%; /* Ocupa el espacio del grid */
+  width: 100%;
+  /* Ocupa el espacio del grid */
   display: flex;
   flex-direction: column;
   align-items: center;

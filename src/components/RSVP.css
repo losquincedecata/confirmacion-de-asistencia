@@ -1,20 +1,27 @@
 .rsvp-container {
   text-align: center;
-  padding: 40px 20px; /* Reduje el padding para que sea consistente con los otros bloques */
+  padding: 40px 20px;
+  /* Reduje el padding para que sea consistente con los otros bloques */
   font-family: sans-serif;
-  width: 100%;       /* Asegura que el contenedor ocupe el ancho disponible */
+  width: 100%;
+  /* Asegura que el contenedor ocupe el ancho disponible */
   box-sizing: border-box;
 }
 
 .rsvp-content {
-  width: 92%;        /* Estandarizado para móvil */
+  width: 92%;
+  /* Todos igual */
   max-width: 500px;
-  margin: 0 auto;    /* Centrado automático */
+  /* Todos igual */
+  margin: 20px auto;
+  /* Todos igual */
   padding: 30px;
+  /* ¡Muy importante que el padding sea igual! */
+  box-sizing: border-box;
+  /* Esto evita que el padding "hinche" la tarjeta */
   border: 2px solid #f0f0f0;
   border-radius: 15px;
   background-color: #fafafa;
-  box-sizing: border-box; /* Asegura que el padding no desborde */
 }
 
 .rsvp-content h2 {
