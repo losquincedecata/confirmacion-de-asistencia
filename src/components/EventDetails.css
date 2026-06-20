@@ -1,14 +1,12 @@
-/* Contenedor unificado con el estilo de Location */
 .event-details-container {
+  width: 92%;           /* Ajuste para móvil[cite: 6] */
+  max-width: 500px;
+  margin: 20px auto;    /* Centrado[cite: 6] */
   text-align: center;
   padding: 40px 20px;
-  max-width: 500px;
-  margin: 0 auto;
   border: 2px solid #f0f0f0;
   border-radius: 15px;
   background-color: #fafafa;
-  margin-bottom: 30px;
-  /* Separación con lo que sigue */
 }
 
 /* Título de la fecha dentro del contenedor */
@@ -44,6 +42,7 @@
 .flip-clock {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;      /* Esto permite que si no entran, salten de línea en lugar de romper el diseño */
   gap: 10px;
   margin-top: 10px;
 }

@@ -6,16 +6,19 @@
 }
 
 .gifts-content {
+  width: 92%; /* Ajuste para móvil: ocupa el 92% del ancho */
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0 auto; /* Centrado automático */
   padding: 30px;
   border: 2px solid #f0f0f0;
   border-radius: 15px;
   background-color: #fafafa;
+  box-sizing: border-box; /* Asegura que el padding no desborde el ancho */
 }
 
-.gifts-container h2 {
-  font-size: 2rem;
+.gifts-content h2 {
+  font-family: 'Parisienne', cursive !important;
+  font-size: 3.5rem !important; /* Estilo elegante aplicado */
   color: #333;
   margin-bottom: 10px;
 }
@@ -27,68 +30,60 @@
   line-height: 1.5;
 }
 
-.gifts-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  max-width: 900px;
-  margin: 0 auto;
+/* Ajuste para que la grilla sea flexible y centrada */
+.grilla-regalos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
 }
 
-.gift-card {
+.btn-regalo {
   background-color: #f8f9fa;
   border: 2px dashed #ccc;
   border-radius: 15px;
-  padding: 30px 20px;
-  width: 250px;
+  padding: 20px 10px;
+  width: 100%; /* Ocupa el espacio del grid */
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.gift-card:hover {
+.btn-regalo:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   border-color: #009ee3;
 }
 
-
 .gift-icon-img {
   width: 80px;
-  /* Tamaño ajustable según prefieras */
   height: auto;
   display: block;
   margin: 0 auto 20px auto;
-  /* Centrado y con espacio hacia abajo[cite: 1, 2] */
 }
 
-.gift-card h3 {
-  font-size: 1.2rem;
+.btn-regalo h3 {
+  font-size: 1.1rem;
   color: #333;
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0;
 }
 
-.gift-amount {
-  font-size: 1.5rem;
+.btn-regalo p {
+  font-size: 1rem;
   font-weight: bold;
   color: #009ee3;
-  margin-bottom: 20px;
+  margin: 0;
 }
 
-.btn-mercadopago {
-  background-color: #009ee3;
-  color: white;
-  text-decoration: none;
-  padding: 10px 25px;
-  border-radius: 20px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.btn-mercadopago:hover {
-  background-color: #0084bd;
+/* Reset de fuentes para los botones */
+.gifts-content .btn-regalo,
+.gifts-content .btn-regalo h3,
+.gifts-content .btn-regalo p,
+.gifts-content p {
+  font-family: 'Montserrat', sans-serif !important;
+  text-transform: none;
 }
 
 .modal-overlay {
@@ -118,19 +113,4 @@
   padding: 1rem;
   margin: 1rem 0;
   border-radius: 8px;
-}
-
-/* Reseteamos la fuente para que las cajitas vuelvan a Montserrat */
-.gifts-content .btn-regalo,
-.gifts-content .btn-regalo h3,
-.gifts-content .btn-regalo p,
-.gifts-content p {
-  font-family: 'Montserrat', sans-serif !important;
-  text-transform: none;
-  /* O uppercase, según prefieras */
-}
-
-/* Aseguramos que el título principal SÍ mantenga la fuente elegante */
-.gifts-content h2 {
-  font-family: 'Parisienne', cursive !important;
 }
