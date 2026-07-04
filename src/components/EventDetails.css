@@ -15,7 +15,7 @@
 }
 
 .event-details-container h2 {
-  font-family: 'Parisienne', cursive !important;
+  font-family: 'Special Elite', cursive !important;
   font-size: 3.5rem !important;
   color: #333;
   margin-bottom: 20px;
@@ -38,6 +38,7 @@
   text-decoration: none;
   padding: 15px 30px;
   border-radius: 30px;
+  font-family: 'Special Elite', cursive;
   font-weight: bold;
   font-size: 1.1rem;
   cursor: pointer;

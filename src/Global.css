@@ -1,6 +1,5 @@
 /* Global.css */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Parisienne&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Special+Elite&display=swap');
 /* Reset básico */
 html,
 body {
@@ -16,64 +15,22 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Special Elite', cursive;
   color: #333;
 }
 
-
-.hero-container h1 {
-  font-size: 6rem;
-  /* Ajustá este número hasta que quede del tamaño que te guste */
-  margin-bottom: 0.5rem;
-  line-height: 1.1;
-  /* Ajusta el espacio entre líneas si el nombre es largo */
-}
-
-/* 2. Ajuste específico para celulares (pantallas hasta 600px) */
-@media (max-width: 600px) {
-  .hero-container h1 {
-    font-size: 4rem;
-    /* Si querés que sea GRANDE, subilo a 5rem o 6rem acá también */
-  }
-}
-
-/* 1. ESTILO ELEGANTE (Para Hero y Footer) */
-.estilo-elegante h1,
-.estilo-elegante h2,
-.estilo-elegante h3 {
-  font-family: 'Parisienne', cursive !important;
-  text-transform: none !important;
-}
-
-/* Ajustamos el tamaño solo para los títulos elegantes */
-.estilo-elegante h2,
-.location-content h2,
-.rsvp-container h2 {
-  font-family: 'Parisienne', cursive !important;
-  font-size: 3.5rem !important;
-  /* Forzamos el tamaño grande */
-  line-height: 1.2;
-  margin-bottom: 20px;
+/* --- Tipografía General (Estilo Máquina de escribir) --- */
+h2, h3, p, div {
+  font-family: 'Special Elite', cursive;
+  letter-spacing: 1px;
   color: #333;
+  text-align: center;
 }
 
 .hero-container h2 {
   font-size: 3rem;
-  /* Ajustá este número hasta que quede del tamaño que te guste */
   margin-bottom: 0.5rem;
   line-height: 1.1;
-  /* Ajusta el espacio entre líneas si el nombre es largo */
-}
-
-/* 2. ESTILO LEGIBLE (Para el resto de la web) */
-h1,
-h2,
-h3,
-p,
-div {
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-  text-align: center;
 }
 
 /* Aseguramos que nada se salga de la pantalla */

@@ -24,6 +24,10 @@ function RSVP() {
       .then((response) => response.json())
       .then(() => {
         setEnviado(true);
+      })
+      .catch((error) => {
+        console.error('Error al confirmar asistencia:', error);
+        alert('Hubo un error al enviar tu confirmación. Por favor, intentá de nuevo.');
       });
   };
 

@@ -22,6 +22,7 @@
   border: 2px solid white;
   padding: 10px 20px;
   border-radius: 25px;
+  font-family: 'Special Elite', cursive;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -34,7 +35,7 @@
 
 .footer-credits {
   margin-top: 15px;
-  font-size: 1 rem;
+  font-size: 1rem;
   color: #312323;
   border-top: 1px solid #333;
   padding-top: 15px;

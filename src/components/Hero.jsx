@@ -1,11 +1,12 @@
 import './Hero.css';
+import bannerImg from '../assets/banner.png';
 
 
 function Hero() {
   return (
     <section className="hero-container estilo-elegante">
       <div className="hero-content">
-        <h1>Catalina</h1>
+        <img src={bannerImg} alt="Catalina" className="hero-banner" />
         <h2>¡Llegaron mis 15!</h2>
       </div>
     </section>
