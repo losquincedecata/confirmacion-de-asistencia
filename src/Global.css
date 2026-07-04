@@ -55,7 +55,7 @@ img {
   .location-content h2,
   .gifts-content h2,
   .rsvp-container h2 {
-    font-size: 2rem !important;
+    font-size: 1.5rem !important;
   }
 
   /* Textos de secciones */
@@ -66,7 +66,7 @@ img {
   }
 
   .dresscode-content h2 {
-    font-size: 1.6rem !important;
+    font-size: 1.3rem !important;
   }
 
   .dresscode-content h3 {
