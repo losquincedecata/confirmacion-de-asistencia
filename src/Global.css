@@ -50,33 +50,12 @@ img {
     font-size: 2rem;
   }
 
-  /* Textos de secciones */
-  .event-details-container p,
-  .salon-name,
-  .address {
-    font-size: 1rem;
-  }
-
-  .dresscode-content h3 {
-    font-size: 1rem;
-    white-space: nowrap;
-  }
-
-  .dresscode-content p {
-    font-size: 0.9rem;
-  }
-
-  .dresscode-icon {
-    font-size: 2rem;
-  }
-
   /* Botones */
   .btn-calendario,
   .btn-llegar,
   .btn-enviar,
   .btn-cerrar,
   .btn-up {
-    font-size: 0.95rem;
     padding: 12px 20px;
   }
 
@@ -104,13 +83,7 @@ img {
   /* Importante para que el padding no desborde */
 }
 
-/* Evitamos que el título se parta en dos renglones */
-.dresscode-content h3 {
-  white-space: nowrap;
-  /* Fuerza a que el texto no salte de línea */
-  font-size: 1.3rem;
-  /* Un poquito más chico para que entre en pantallas chicas */
-}
+
 
 .dresscode-icon-img,
 .party-icon-img {

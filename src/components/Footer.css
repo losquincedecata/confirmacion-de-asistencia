@@ -25,7 +25,7 @@
   padding: 10px 20px;
   border-radius: 25px;
   font-family: 'Special Elite', cursive;
-  font-size: 1rem;
+  font-size: clamp(0.85rem, 0.5rem + 0.6vw, 1rem);
   cursor: pointer;
   transition: all 0.3s ease;
 }
