@@ -37,9 +37,10 @@
 
 .footer-credits {
   margin-top: 15px;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 0.5rem + 0.6vw, 1rem);
   color: #312323;
   border-top: 1px solid #333;
   padding-top: 15px;
   width: 100%;
+  white-space: nowrap;
 }
