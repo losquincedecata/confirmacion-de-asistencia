@@ -10,10 +10,11 @@
   gap: 30px;
 }
 
-.banner-final h2 {
-  font-size: 2.5rem;
-  margin: 0;
-  letter-spacing: 2px;
+.footer-banner-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .btn-up {
