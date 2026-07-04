@@ -50,23 +50,11 @@ img {
     font-size: 2rem;
   }
 
-  /* Encabezados de secciones (EventDetails, Location, Dresscode, Gifts, RSVP) */
-  .event-details-container h2,
-  .location-content h2,
-  .gifts-content h2,
-  .rsvp-container h2 {
-    font-size: 1.5rem !important;
-  }
-
   /* Textos de secciones */
   .event-details-container p,
   .salon-name,
   .address {
     font-size: 1rem;
-  }
-
-  .dresscode-content h2 {
-    font-size: 1.3rem !important;
   }
 
   .dresscode-content h3 {

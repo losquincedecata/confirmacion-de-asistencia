@@ -23,7 +23,7 @@
 
 .gifts-content h2 {
   font-family: 'Special Elite', cursive !important;
-  font-size: 3.5rem !important;
+  font-size: clamp(1.4rem, 0.8rem + 2.25vw, 3.5rem) !important;
   /* Estilo elegante aplicado */
   color: #333;
   margin-bottom: 10px;

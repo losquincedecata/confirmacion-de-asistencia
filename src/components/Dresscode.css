@@ -21,7 +21,7 @@
 
 .dresscode-content h2 {
   font-family: 'Special Elite', cursive !important;
-  font-size: 2.5rem !important;
+  font-size: clamp(1.2rem, 0.6rem + 2vw, 2.5rem) !important;
   color: #333;
   margin-bottom: 20px;
   white-space: nowrap;

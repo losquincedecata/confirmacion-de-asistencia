@@ -16,7 +16,7 @@
 
 .event-details-container h2 {
   font-family: 'Special Elite', cursive !important;
-  font-size: 3.5rem !important;
+  font-size: clamp(1.4rem, 0.8rem + 2.25vw, 3.5rem) !important;
   color: #333;
   margin-bottom: 20px;
 }
@@ -67,7 +67,19 @@
   padding: 10px;
   min-width: 50px;
   border-radius: 8px;
-  /* Un toque redondeado también al contador */
+  position: relative;
+}
+
+.flip-card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 2px;
+  background: white;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
 .flip-label {
