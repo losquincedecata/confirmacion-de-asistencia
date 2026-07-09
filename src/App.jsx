@@ -6,6 +6,7 @@ import Dresscode from './components/Dresscode';
 import Gifts from './components/Gifts';
 import RSVP from './components/RSVP';
 import Footer from './components/Footer';
+import CollageFrame from './components/CollageFrame';
 
 // Definimos la función AFUERA del componente para que esté siempre disponible
 function calculateTimeLeft() {
@@ -43,6 +44,7 @@ function App() {
 
   return (
     <div className="app-container">
+      <CollageFrame />
       <Hero />
       <EventDetails timeLeft={timeLeft} agendarEvento={agendarEvento} />
       <Location />
