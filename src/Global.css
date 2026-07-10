@@ -19,11 +19,6 @@ body {
   color: #333;
 }
 
-.app-container {
-  position: relative;
-  z-index: 2;
-}
-
 /* --- Tipografía General (Estilo Máquina de escribir) --- */
 h2, h3, p, div {
   font-family: 'Special Elite', cursive;
