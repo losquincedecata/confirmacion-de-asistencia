@@ -15,7 +15,7 @@
   height: auto;
   display: block;
   margin: 0 auto;
-  animation: latido 2s ease-in-out infinite;
+  animation: latido 1.5s ease-in-out infinite;
 }
 
 .btn-up {

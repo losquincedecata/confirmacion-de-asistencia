@@ -1,5 +1,6 @@
 /* Global.css */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Special+Elite&display=swap');
+
 /* Reset básico */
 html,
 body {
@@ -21,7 +22,10 @@ body {
 }
 
 /* --- Tipografía General (Estilo Máquina de escribir) --- */
-h2, h3, p, div {
+h2,
+h3,
+p,
+div {
   font-family: 'Special Elite', cursive;
   letter-spacing: 1px;
   color: #333;
@@ -51,13 +55,6 @@ img {
     font-size: 1.5rem;
   }
 
-  /* .hero-container img {
-  width: 105%;        O el porcentaje/píxeles que quieras 
-  max-width: 600px;   Le ponés un límite para que no sea gigante en PC 
-  margin: 0 auto;     La centrás si es necesario 
-  display: block;
-} 
-*/
 
   /* Botones */
   .btn-calendario,
@@ -69,27 +66,30 @@ img {
   }
 
   /* Tarjetas */
-  .location-content,
+  .event-details-container,
   .dresscode-content,
-  .gifts-content,
+  .location-container,
+  .location-content,
+  .rsvp-container,
   .rsvp-content,
-  .event-details-container {
-    max-width: 90%;
+  .gifts-content {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
     padding: 20px !important;
   }
 }
 
-/* Aseguramos que todas las tarjetas se centren y se adapten */
+/* Aseguramos que TODAS las tarjetas se centren y ocupen su caja blanca */
 .event-details-container,
-.dresscode-content {
-  width: 92%;
-  /* En lugar de un ancho fijo, usamos porcentaje */
-  max-width: 500px;
-  /* Pero no dejamos que pase de 500px en PC */
-  margin: 20px auto;
-  /* Esto centra automáticamente */
+.dresscode-content,
+.location-content,
+.gifts-content,
+.rsvp-content {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
   box-sizing: border-box;
-  /* Importante para que el padding no desborde */
 }
 
 
@@ -142,6 +142,25 @@ img {
   height: auto;
   margin: 20px auto;
   display: block;
-  animation: latido 2s ease-in-out infinite;
+  animation: latido 1.5s ease-in-out infinite;
   /* El 'infinite' hace que nunca pare */
+}
+
+@media (max-width: 600px) {
+
+  /* Tarjetas en Celular */
+  .event-details-container,
+  .dresscode-content,
+  .location-container,
+  .location-content,
+  .rsvp-container,
+  .rsvp-content,
+  .gifts-content {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 10px !important;
+    /* <--- Bajamos el relleno para ganar espacio */
+  }
+
 }

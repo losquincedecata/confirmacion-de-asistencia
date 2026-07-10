@@ -1,10 +1,4 @@
 .event-details-container {
-  width: 92%;
-  /* Todos igual */
-  max-width: 500px;
-  /* Todos igual */
-  margin: 20px auto;
-  /* Todos igual */
   padding: 30px;
   /* ¡Muy importante que el padding sea igual! */
   box-sizing: border-box;
@@ -55,19 +49,20 @@
 .flip-clock {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap !important;
   /* Esto permite que si no entran, salten de línea en lugar de romper el diseño */
-  gap: 10px;
+  gap: 5px;
   margin-top: 10px;
+  width: 100%;
 }
-
+@media (max-width: 600px) {
 .flip-card {
   background: #f2e5e5;
   color: rgb(54, 53, 53);
-  padding: 10px;
-  min-width: 50px;
   border-radius: 8px;
   position: relative;
+  min-width: 50px;
+  padding: 7px;
 }
 
 .flip-card::after {
@@ -89,12 +84,11 @@
   text-transform: uppercase;
   color: rgb(54, 53, 53);
 }
-
+}
 .party-icon-img {
   width: 100px;
-  /* Ajustá el tamaño a tu gusto */
   height: auto;
   display: block;
   margin: 0 auto 15px auto;
-  /* Centra la imagen y le da espacio abajo */
+  animation: latido 1.5s ease-in-out infinite;
 }

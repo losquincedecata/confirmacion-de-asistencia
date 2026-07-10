@@ -6,16 +6,8 @@
 }
 
 .gifts-content {
-  width: 92%;
-  /* Todos igual */
-  max-width: 500px;
-  /* Todos igual */
-  margin: 20px auto;
-  /* Todos igual */
   padding: 30px;
-  /* ¡Muy importante que el padding sea igual! */
   box-sizing: border-box;
-  /* Esto evita que el padding "hinche" la tarjeta */
   border: 2px solid #f0f0f0;
   border-radius: 15px;
   background-color: #fafafa;
@@ -70,6 +62,7 @@
   height: auto;
   display: block;
   margin: 0 auto 20px auto;
+  animation: latido 1.5s ease-in-out infinite;
 }
 
 .btn-regalo h3 {
