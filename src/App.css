@@ -1,0 +1,16 @@
+.app-container {
+  position: relative;
+  overflow: hidden; /* Esto evita que los recortes se salgan de la pantalla y generen scroll innecesario */
+}
+
+.sticker-prueba {
+    position: absolute;
+    top: 1%;
+    left: 77%;
+    width: 20%;
+    min-width: 150px;   /* Evita que se vuelva súper chiquito en celulares */
+    max-width: 500px;   /* Evita que crezca a más de 500px en pantallas gigantes */
+    z-index: 50;
+    pointer-events: none;
+    transform: rotate(15deg);
+}

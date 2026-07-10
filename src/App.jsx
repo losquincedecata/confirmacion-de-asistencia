@@ -1,3 +1,4 @@
+import './App.css';
 import { useState, useEffect } from 'react';
 import Hero from './components/Hero';
 import EventDetails from './components/EventDetails';
@@ -6,6 +7,9 @@ import Dresscode from './components/Dresscode';
 import Gifts from './components/Gifts';
 import RSVP from './components/RSVP';
 import Footer from './components/Footer';
+import cata1 from './assets/collage/cata1.png';
+import cata2 from './assets/collage/cata2.png';
+
 
 // Definimos la función AFUERA del componente para que esté siempre disponible
 function calculateTimeLeft() {
@@ -43,6 +47,7 @@ function App() {
 
   return (
     <div className="app-container">
+      <img src={cata2} className="sticker-prueba" />
       <Hero />
       <EventDetails timeLeft={timeLeft} agendarEvento={agendarEvento} />
       <Location />
