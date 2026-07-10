@@ -1,16 +1,258 @@
 .app-container {
-  position: relative;
-  overflow: hidden; /* Esto evita que los recortes se salgan de la pantalla y generen scroll innecesario */
+    position: relative;
+
 }
 
-.sticker-prueba {
+
+.contenedor-stickers-pegajosos {
+  /* ¡Acá está el superpoder! */
+  position: sticky;
+  top: 0;          /* Se pega cuando llega al tope de la ventana */
+  height: 100vh;   /* Ocupa toda la altura de la pantalla */
+  width: 100%; /* ¡Importante para que ocupe de lado a lado! */
+  pointer-events: none; /* Muy importante para poder hacer scroll sobre él */
+  z-index: 0;      /* Detrás de todo */
+}
+
+/* Esta es la cajita blanca que tiene los textos de la fiesta */
+.caja-datos {
+    position: relative;
+
+    /* SUPERPODER 3: Mandarla al "primer piso" (por encima del z-index: 0 de las fotos) */
+    z-index: 10;
+    margin: 50px auto;
+    max-width: 800px;
+    width:85%;
+
+    border-radius: 15px;
+    padding: 30px;
+}
+
+/* 1. Reglas generales para TODAS las fotos */
+.sticker {
     position: absolute;
-    top: 1%;
-    left: 77%;
-    width: 20%;
-    min-width: 150px;   /* Evita que se vuelva súper chiquito en celulares */
-    max-width: 500px;   /* Evita que crezca a más de 500px en pantallas gigantes */
-    z-index: 50;
+    z-index: 0;
     pointer-events: none;
+    /* Para no tapar los clics de los botones */
+
+    /* Truco extra para celulares */
+    min-width: 80px;
+    max-width: 300px;
+}
+
+/* Para decidir quién va arriba de quién, usá la propiedad z-index.
+ El que tenga el número más alto, gana. */
+
+/* 2. Reglas ESPECÍFICAS para cada foto */
+
+/* cata espiral */
+.sticker:nth-child(1) {
+    top: 5%;
+    left: -10%;
+    width: 50%;
+    transform: rotate(-25deg);
+}
+
+/* globo corazon */
+.sticker:nth-child(2) {
+    top: 50%;
+    left: 0%;
+    width: 20%;
+    transform: rotate(-10deg);
+}
+
+/* baloons */
+.sticker:nth-child(3) {
+    top: 10%;
+    left: -5%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* beso */
+.sticker:nth-child(4) {
+    top: 30%;
+    left: 00%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* bola boliche violeta */
+.sticker:nth-child(5) {
+    top: 75%;
+    left: 0%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* bola boliche mano */
+.sticker:nth-child(6) {
+    top: 55%;
+    left: 0%;
+    width: 1%;
+    min-width: 90px;
+    max-width: 500px;
     transform: rotate(15deg);
+}
+
+/* cata sentada  */
+.sticker:nth-child(7) {
+    top: 75%;
+    left: 0%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* cata polaroid  */
+.sticker:nth-child(8) {
+    top: 0.5%;
+    left: 85%;
+    width: 1%;
+    min-width: 90px;
+    max-width: 500px;
+    transform: rotate(15deg);
+}
+
+/* trago cerezas */
+.sticker:nth-child(9) {
+    top: 33%;
+    left: 0%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* donuts  */
+.sticker:nth-child(10) {
+    top: 42%;
+    left: 0%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* trago violeta */
+.sticker:nth-child(11) {
+    top: 61%;
+    left: 0%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* trago-mano */
+.sticker:nth-child(12) {
+    top: 41%;
+    left: 0%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* trago rosa  */
+.sticker:nth-child(13) {
+    top: 63%;
+    left: 0%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* flores rosas */
+.sticker:nth-child(14) {
+    top: 28%;
+    left: 0%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* gatito anteojos */
+.sticker:nth-child(15) {
+    top: 46%;
+    left: 0%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* gatito bandana */
+.sticker:nth-child(16) {
+    top: 29%;
+    left: 0%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* globo corazon con papel picado */
+.sticker:nth-child(17) {
+    top: 20%;
+    left: 0%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* mano copa papel picado */
+.sticker:nth-child(18) {
+    top: 40%;
+    left: 70%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* margarita  */
+.sticker:nth-child(19) {
+    top: 40%;
+    left: 70%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* megafono */
+.sticker:nth-child(20) {
+    top: 40%;
+    left: 70%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* parque diversiones */
+.sticker:nth-child(21) {
+    top: 40%;
+    left: 70%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* lets party */
+.sticker:nth-child(22) {
+    top: 40%;
+    left: 70%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* globo perrito  */
+.sticker:nth-child(23) {
+    top: 20%;
+    left: 70%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* torta */
+.sticker:nth-child(24) {
+    top: 23%;
+    left: 70%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* tulipanes rosas */
+.sticker:nth-child(25) {
+    top: 5%;
+    left: 70%;
+    width: 25%;
+    transform: rotate(5deg);
+}
+
+/* tulipanes */
+.sticker:nth-child(26) {
+    top: 0%;
+    left: 0%;
+    width: 25%;
+    transform: rotate(5deg);
 }

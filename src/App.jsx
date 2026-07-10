@@ -7,9 +7,10 @@ import Dresscode from './components/Dresscode';
 import Gifts from './components/Gifts';
 import RSVP from './components/RSVP';
 import Footer from './components/Footer';
-import cata1 from './assets/collage/cata1.png';
-import cata2 from './assets/collage/cata2.png';
 
+// Importamos todas las imágenes de la carpeta collage de un plumazo
+const stickersGlob = import.meta.glob('./assets/collage/*.png', { eager: true });
+const listaStickers = Object.values(stickersGlob).map((module) => module.default);
 
 // Definimos la función AFUERA del componente para que esté siempre disponible
 function calculateTimeLeft() {
@@ -47,15 +48,37 @@ function App() {
 
   return (
     <div className="app-container">
-      <img src={cata2} className="sticker-prueba" />
-      <Hero />
-      <EventDetails timeLeft={timeLeft} agendarEvento={agendarEvento} />
-      <Location />
+      <div className='caja-datos'>
+        <Hero />
+      </div>
 
-      <Dresscode />
-      <Gifts />
-      <RSVP />
-      <Footer />
+
+      <div className="contenedor-stickers-pegajosos">
+        {listaStickers.map((imagenSrc, index) => (
+          <img
+            key={index}
+            src={imagenSrc}
+            className="sticker"
+            alt={`adorno-${index}`}
+          />
+        ))}
+        {/* --- FIN DEL COLLAGE --- */}
+      </div>
+
+      <div className='caja-datos'>
+        <EventDetails timeLeft={timeLeft} agendarEvento={agendarEvento} /></div>
+      <div className='caja-datos'>
+        <Location /></div>
+      <div className='caja-datos'>
+        <Dresscode />
+      </div>
+      <div className='caja-datos'>
+        <Gifts />
+      </div>
+      <div className='caja-datos'>
+        <RSVP /></div>
+      <div className='caja-datos'>
+        <Footer /></div>
     </div>
   );
 }

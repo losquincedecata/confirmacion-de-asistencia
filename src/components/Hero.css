@@ -2,11 +2,35 @@
   text-align: center;
   padding: 50px 20px;
   font-family: sans-serif;
+  position: relative;
 }
 
 .hero-banner {
-  max-width: 100%;
-  height: auto;
-  display: block;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  z-index: 20;
+  /* height: auto; */
+  /* display: block; */
   margin: 0 auto;
+}
+
+.sticker-hero-cataSentada {
+  position: absolute;
+  /* z-index: 7; */
+  top: -1%;   /* Truco: un valor negativo hace que asome saliéndose un poco por arriba del Hero */
+  right: -13%;
+  width: 38%; 
+  /* transform: rotate(20deg); */
+  pointer-events: none;
+}
+
+.sticker-hero-cataPolaroid {
+  position: absolute;
+  /* z-index: 8; */
+  top: -7%;   /* Truco: un valor negativo hace que asome saliéndose un poco por arriba del Hero */
+  right: 70%;
+  width: 40%; 
+  transform: rotate(15deg);
+  pointer-events: none;
 }

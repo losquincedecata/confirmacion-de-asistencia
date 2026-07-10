@@ -17,6 +17,7 @@ body {
   background-attachment: fixed;
   font-family: 'Special Elite', cursive;
   color: #333;
+  overflow-x: hidden;
 }
 
 /* --- Tipografía General (Estilo Máquina de escribir) --- */
@@ -47,8 +48,16 @@ img {
 
   /* Hero */
   .hero-container h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
+
+  /* .hero-container img {
+  width: 105%;        O el porcentaje/píxeles que quieras 
+  max-width: 600px;   Le ponés un límite para que no sea gigante en PC 
+  margin: 0 auto;     La centrás si es necesario 
+  display: block;
+} 
+*/
 
   /* Botones */
   .btn-calendario,
