@@ -5,13 +5,19 @@
 
 
 .contenedor-stickers-pegajosos {
-  /* ¡Acá está el superpoder! */
-  position: sticky;
-  top: 0;          /* Se pega cuando llega al tope de la ventana */
-  height: 100vh;   /* Ocupa toda la altura de la pantalla */
-  width: 100%; /* ¡Importante para que ocupe de lado a lado! */
-  pointer-events: none; /* Muy importante para poder hacer scroll sobre él */
-  z-index: 0;      /* Detrás de todo */
+    /* ¡Acá está el superpoder! */
+    position: sticky;
+    top: 0;
+    /* Se pega cuando llega al tope de la ventana */
+    height: 100vh;
+    /* Ocupa toda la altura de la pantalla */
+    width: 100%;
+    /* ¡Importante para que ocupe de lado a lado! */
+    pointer-events: none;
+    /* Muy importante para poder hacer scroll sobre él */
+    z-index: 0;
+    /* Detrás de todo */
+    overflow-x: hidden;
 }
 
 /* Esta es la cajita blanca que tiene los textos de la fiesta */
@@ -22,7 +28,7 @@
     z-index: 10;
     margin: 5px auto;
     max-width: 800px;
-    width:85%;
+    width: 85%;
 
     border-radius: 15px;
     padding: 3px;
@@ -49,6 +55,7 @@
 .sticker:nth-child(1) {
     top: 5%;
     left: -10%;
+    z-index: 15;
     width: 50%;
     transform: rotate(-25deg);
 }

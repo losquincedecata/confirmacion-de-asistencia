@@ -3,6 +3,7 @@
   padding: 50px 20px;
   font-family: sans-serif;
   position: relative;
+  overflow-x: hidden;
 }
 
 .hero-banner {
