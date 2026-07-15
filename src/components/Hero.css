@@ -1,6 +1,6 @@
 .hero-container {
   text-align: center;
-  padding: 50px 20px;
+  padding: 54px 28px;
   font-family: sans-serif;
   position: relative;
   overflow-x: hidden;
@@ -19,9 +19,9 @@
 .sticker-hero-cataSentada {
   position: absolute;
   /* z-index: 7; */
-  top: -1%;   /* Truco: un valor negativo hace que asome saliéndose un poco por arriba del Hero */
-  right: -13%;
-  width: 38%; 
+  top: 0%;   /* Truco: un valor negativo hace que asome saliéndose un poco por arriba del Hero */
+  right: -1%;
+  width: 32%; 
   /* transform: rotate(20deg); */
   pointer-events: none;
 }
@@ -29,9 +29,9 @@
 .sticker-hero-cataPolaroid {
   position: absolute;
   /* z-index: 8; */
-  top: -7%;   /* Truco: un valor negativo hace que asome saliéndose un poco por arriba del Hero */
-  right: 70%;
-  width: 40%; 
+  top: 4%;   /* Truco: un valor negativo hace que asome saliéndose un poco por arriba del Hero */
+  right: 74%;
+  width: 28%; 
   transform: rotate(15deg);
   pointer-events: none;
 }

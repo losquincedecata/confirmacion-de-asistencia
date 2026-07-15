@@ -48,9 +48,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <div className='caja-datos'>
         <Hero />
-      </div>
 
 
       <div className="contenedor-stickers-pegajosos">
