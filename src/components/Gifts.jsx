@@ -3,9 +3,9 @@ import './Gifts.css';
 import giftImg from '../assets/icono-regalo.svg'; // Importación de la imagen
 
 const regalos = [
-  { id: 1, titulo: "Cabalgata por la playa", monto: "$15.000", icono: "🐎", alias: "micaela.za", cvu: "0000003100015137881806" },
-  { id: 2, titulo: "Balde de Nutella", monto: "$30.000", icono: "🍫", alias: "micaela.za", cvu: "0000003100015137881806" },
-  { id: 3, titulo: "Oso Panda Gigante", monto: "$50.000", icono: "🐼", alias: "micaela.za", cvu: "0000003100015137881806" },
+  { id: 1, titulo: "Cabalgata por la playa", monto: "$30.000", icono: "🐎", alias: "micaela.za", cvu: "0000003100015137881806" },
+  { id: 2, titulo: "Balde de Nutella", monto: "$50.000", icono: "🍫", alias: "micaela.za", cvu: "0000003100015137881806" },
+  { id: 3, titulo: "Oso Panda Gigante", monto: "$70.000", icono: "🐼", alias: "micaela.za", cvu: "0000003100015137881806" },
   { id: 4, titulo: "Financiar mi viaje a la luna", monto: "$100.000", icono: "🚀", alias: "micaela.za", cvu: "0000003100015137881806" },
 ];
 
