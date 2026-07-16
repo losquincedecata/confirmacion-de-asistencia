@@ -42,6 +42,13 @@ function App() {
     return () => clearInterval(timer);
   }, []);
 
+  const iniciarMusica = () => {
+    if (!musicaActiva && audioRef.current) {
+      audioRef.current.play();
+      setMusicaActiva(true);
+    }
+  };
+
   const toggleMusica = () => {
     if (musicaActiva) {
       audioRef.current.pause();
@@ -58,19 +65,19 @@ function App() {
   };
 
   return (
-    <div className="app-container">
+    <div className="app-container" onClick={iniciarMusica}>
       <audio ref={audioRef} src={temaMusical} loop />
 
       <button className="btn-musica" onClick={toggleMusica}>
         {musicaActiva ? '🔊' : '🔇'}
       </button>
 
-        <Hero />
+      <Hero />
 
-  <div className="contenedor-stickers-pegajosos">
-     <img src={marcoIzquierdo} className="marco-lateral marco-izquierdo" alt="Decoración Izquierda" />
-     <img src={marcoDerecho} className="marco-lateral marco-derecho" alt="Decoración Derecha" />
-  </div>
+      <div className="contenedor-stickers-pegajosos">
+        <img src={marcoIzquierdo} className="marco-lateral marco-izquierdo" alt="Decoración Izquierda" />
+        <img src={marcoDerecho} className="marco-lateral marco-derecho" alt="Decoración Derecha" />
+      </div>
 
       <div className='caja-datos'>
         <EventDetails timeLeft={timeLeft} agendarEvento={agendarEvento} /></div>
@@ -84,9 +91,9 @@ function App() {
       </div>
       <div className='caja-datos'>
         <RSVP /></div>
-      <div className='caja-datos'>
-        <Footer /></div>
-    </div>
+
+      <Footer /></div>
+
   );
 }
 
