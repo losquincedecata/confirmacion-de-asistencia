@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Hero from './components/Hero';
 import EventDetails from './components/EventDetails';
 import Location from './components/Location';
@@ -10,6 +10,7 @@ import Footer from './components/Footer';
 
 import marcoDerecho from './assets/collage/Izq.png';
 import marcoIzquierdo from './assets/collage/Der.png';
+import temaMusical from './assets/Dua Lipa - Dance The Night.mp3';
 
 // Definimos la función AFUERA del componente para que esté siempre disponible
 function calculateTimeLeft() {
@@ -31,6 +32,8 @@ function calculateTimeLeft() {
 
 function App() {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [musicaActiva, setMusicaActiva] = useState(false);
+  const audioRef = useRef(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -38,6 +41,15 @@ function App() {
     }, 1000);
     return () => clearInterval(timer);
   }, []);
+
+  const toggleMusica = () => {
+    if (musicaActiva) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setMusicaActiva(!musicaActiva);
+  };
 
   const agendarEvento = () => {
     const titulo = "¡Fiesta de 15 de Cata!";
@@ -47,6 +59,12 @@ function App() {
 
   return (
     <div className="app-container">
+      <audio ref={audioRef} src={temaMusical} loop />
+
+      <button className="btn-musica" onClick={toggleMusica}>
+        {musicaActiva ? '🔊' : '🔇'}
+      </button>
+
         <Hero />
 
   <div className="contenedor-stickers-pegajosos">
