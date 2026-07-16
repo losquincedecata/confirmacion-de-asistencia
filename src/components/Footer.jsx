@@ -21,7 +21,9 @@ function Footer() {
       </button>
 
       <div className="footer-credits">
-        <p>🐒 Creado con mucho amor por la tía mono 🍌</p>
+        <p>Creado con mucho amor</p>
+        <p>por la tía mono</p>
+        <p>🐒🍌</p>
       </div>
     </footer>
   );
