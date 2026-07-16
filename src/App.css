@@ -41,7 +41,7 @@
   height: 100vh; /* Ocupa el 100% del alto de la pantalla del celular */
   
   /* IMPORTANTE: Evita que el marco se haga gigante y tape el texto del medio */
-  max-width: 25%; /* Prueba cambiar este número si los ves muy anchos o angostos */
+  width: 40%; /* Prueba cambiar este número si los ves muy anchos o angostos */
   
   /* Si la foto es más corta que la pantalla, 'cover' hace que se estire prolijo sin deformarse */
   object-fit: contain; 
