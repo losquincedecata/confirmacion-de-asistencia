@@ -10,11 +10,12 @@
     /* Se pega cuando llega al tope de la ventana */
     height: 100vh;
     /* Ocupa toda la altura de la pantalla */
+    margin-bottom: -100vh;
     width: 100%;
     /* ¡Importante para que ocupe de lado a lado! */
     pointer-events: none;
     /* Muy importante para poder hacer scroll sobre él */
-    z-index: 0;
+    z-index: 50;
     /* Detrás de todo */
     overflow-x: hidden;
 }
@@ -43,7 +44,7 @@
   max-width: 25%; /* Prueba cambiar este número si los ves muy anchos o angostos */
   
   /* Si la foto es más corta que la pantalla, 'cover' hace que se estire prolijo sin deformarse */
-  object-fit: cover; 
+  object-fit: contain; 
   
   z-index: 50;
   pointer-events: none; /* Para no bloquear los clics de la página */
