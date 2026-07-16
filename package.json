@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@rolldown/binding-linux-x64-gnu": "^1.2.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
   },

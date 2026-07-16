@@ -8,9 +8,8 @@ import Gifts from './components/Gifts';
 import RSVP from './components/RSVP';
 import Footer from './components/Footer';
 
-// Importamos todas las imágenes de la carpeta collage de un plumazo
-const stickersGlob = import.meta.glob('./assets/collage/*.png', { eager: true });
-const listaStickers = Object.values(stickersGlob).map((module) => module.default);
+import marcoDerecho from './assets/collage/Izq.png';
+import marcoIzquierdo from './assets/collage/Der.png';
 
 // Definimos la función AFUERA del componente para que esté siempre disponible
 function calculateTimeLeft() {
@@ -50,18 +49,10 @@ function App() {
     <div className="app-container">
         <Hero />
 
-
-      <div className="contenedor-stickers-pegajosos">
-        {listaStickers.map((imagenSrc, index) => (
-          <img
-            key={index}
-            src={imagenSrc}
-            className="sticker"
-            alt={`adorno-${index}`}
-          />
-        ))}
-        {/* --- FIN DEL COLLAGE --- */}
-      </div>
+  <div className="contenedor-stickers-pegajosos">
+     <img src={marcoIzquierdo} className="marco-lateral marco-izquierdo" alt="Decoración Izquierda" />
+     <img src={marcoDerecho} className="marco-lateral marco-derecho" alt="Decoración Derecha" />
+  </div>
 
       <div className='caja-datos'>
         <EventDetails timeLeft={timeLeft} agendarEvento={agendarEvento} /></div>

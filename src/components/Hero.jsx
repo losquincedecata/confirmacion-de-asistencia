@@ -1,7 +1,7 @@
 import './Hero.css';
 import bannerImg from '../assets/banner.png';
-import cataSentada from '../assets/collage/cata1.png'
-import cataPolaroid from '../assets/collage/cata2.png'
+import cataSentada from '../assets/cata1.png'
+import cataPolaroid from '../assets/cata2.png'
 
 
 

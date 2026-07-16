@@ -3,7 +3,6 @@
 
 }
 
-
 .contenedor-stickers-pegajosos {
     /* ¡Acá está el superpoder! */
     position: sticky;
@@ -34,236 +33,31 @@
     padding: 3px;
 }
 
-/* 1. Reglas generales para TODAS las fotos */
-.sticker {
-    position: absolute;
-    z-index: 0;
-    pointer-events: none;
-    /* Para no tapar los clics de los botones */
-
-    /* Truco extra para celulares */
-    min-width: 80px;
-    max-width: 300px;
+/* REGLA GENERAL PARA AMBOS MARCOS */
+.marco-lateral {
+  position: absolute;
+  top: 0;
+  height: 100vh; /* Ocupa el 100% del alto de la pantalla del celular */
+  
+  /* IMPORTANTE: Evita que el marco se haga gigante y tape el texto del medio */
+  max-width: 25%; /* Prueba cambiar este número si los ves muy anchos o angostos */
+  
+  /* Si la foto es más corta que la pantalla, 'cover' hace que se estire prolijo sin deformarse */
+  object-fit: cover; 
+  
+  z-index: 50;
+  pointer-events: none; /* Para no bloquear los clics de la página */
 }
 
-/* Para decidir quién va arriba de quién, usá la propiedad z-index.
- El que tenga el número más alto, gana. */
-
-/* 2. Reglas ESPECÍFICAS para cada foto */
-
-/* cata espiral */
-.sticker:nth-child(1) {
-    top: -1%;
-    left: -10%;
-    z-index: 15;
-    width: 50%;
-    transform: rotate(-20deg);
+/* REGLA ESPECÍFICA: MARCO IZQUIERDO */
+.marco-izquierdo {
+  left: 0; /* Lo pega a la izquierda */
+  object-position: left top; /* Le dice a la compu qué parte de la foto priorizar si tiene que recortar */
 }
 
-/* globo corazon */
-.sticker:nth-child(2) {
-    top: 1%;
-    left: 82%;
-    z-index: 15;
-    width: 24%;
-    transform: rotate(-15deg);
+/* REGLA ESPECÍFICA: MARCO DERECHO */
+.marco-derecho {
+  right: 0; /* Lo pega a la derecha */
+  object-position: right top;
 }
 
-/* baloons */
-.sticker:nth-child(3) {
-    top: 40%;
-    left: -3%;
-    z-index: 16;
-    width: 34%;
-}
-
-/* beso */
-.sticker:nth-child(4) {
-    top: 1%;
-    left: 24%;
-    width: 20%;
-    transform: rotate(35deg);
-}
-
-/* bola boliche violeta */
-.sticker:nth-child(5) {
-    top: 2%;
-    left: -4%;
-    width: 34%;
-    transform: rotate(5deg);
-}
-
-/* bola boliche mano */
-.sticker:nth-child(6) {
-    top: 14%;
-    left: 70%;
-    width: 1%;
-    z-index: 14;
-    min-width: 90px;
-    max-width: 500px;
-}
-
-/* cata sentada  */
-.sticker:nth-child(7) {
-    top: 75%;
-    left: 126%;
-    width: 25%;
-}
-
-/* cata polaroid  */
-.sticker:nth-child(8) {
-    top: 75%;
-    left: 149%;
-    width: 1%;
-    min-width: 90px;
-    max-width: 500px;
-    transform: rotate(15deg);
-}
-
-/* trago cerezas */
-.sticker:nth-child(9) {
-    top: 21%;
-    left: -3%;
-    width: 25%;
-    z-index: 15;
-    transform: rotate(5deg);
-}
-
-/* donuts INVISIBLE */
-.sticker:nth-child(10) {
-    top: 42%;
-    left: 135%;
-    width: 25%;
-    transform: rotate(5deg);
-}
-
-/* trago violeta */
-.sticker:nth-child(11) {
-    top: 20%;
-    left: 114%;
-    width: 25%;
-}
-
-/* trago-mano invisible*/
-.sticker:nth-child(12) {
-    top: 52%;
-    left: 142%;
-    width: 25%;
-    transform: rotate(5deg);
-}
-
-/* trago rosa  */
-.sticker:nth-child(13) {
-    top: 0%;
-    left: 66%;
-    width: 24%;
-    z-index: 13;
-    transform: rotate(-15deg);
-}
-
-/* flores rosas */
-.sticker:nth-child(14) {
-    top: 82%;
-    left: -8%;
-    width: 25%;
-    z-index: 17;
-    transform: rotate(5deg);
-}
-
-/* gatito anteojos */
-.sticker:nth-child(15) {
-    top: 62%;
-    left: -4%;
-    width: 28%;
-    z-index: 16;
-    transform: rotate(5deg);
-}
-
-/* gatito bandana */
-.sticker:nth-child(16) {
-    top: 16%;
-    left: 80%;
-    width: 25%;
-    z-index: 16;
-    transform: rotate(5deg);
-}
-
-/* globo corazon con papel picado */
-.sticker:nth-child(17) {
-    top: 3%;
-    left: 59%;
-    width: 35%;
-    transform: rotate(5deg);
-}
-
-/* mano copa papel picado */
-.sticker:nth-child(18) {
-    top: 58%;
-    left: 11%;
-    width: 25%;
-    transform: rotate(0deg);
-}
-
-/* margarita  */
-.sticker:nth-child(19) {
-    top: 69%;
-    left: 87%;
-    width: 16%;
-}
-
-/* megafono */
-.sticker:nth-child(20) {
-    top: 31%;
-    left: 70%;
-    width: 30%;
-    z-index: 16;
-    transform: rotate(20deg);
-}
-
-/* parque diversiones INVISIBLE */
-.sticker:nth-child(21) {
-    top: 40%;
-    left: 170%;
-    width: 25%;
-    transform: rotate(5deg);
-}
-
-/* lets party */
-.sticker:nth-child(22) {
-    top: 0%;
-    left: 37%;
-    width: 30%;
-    z-index: 16;
-}
-
-/* globo perrito  */
-.sticker:nth-child(23) {
-    top: 50%;
-    left: 74%;
-    width: 27%;
-    z-index: 16;
-    transform: rotate(-8deg);
-}
-
-/* torta */
-.sticker:nth-child(24) {
-    top: 47%;
-    left: 66%;
-    width: 25%;
-    transform: rotate(-15deg);
-}
-
-/* tulipanes rosas */
-.sticker:nth-child(25) {
-    top: 80%;
-    left: 75%;
-    width: 25%;
-}
-
-/* tulipanes invisible*/
-.sticker:nth-child(26) {
-    top: 0%;
-    left: 127%;
-    width: 20%;
-    transform: rotate(35deg);
-}
