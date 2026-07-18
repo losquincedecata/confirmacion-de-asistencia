@@ -11,7 +11,7 @@ function Footer() {
   };
 
   return (
-    <footer className="footer-container estilo-elegante">
+    <footer className="footer-container">
       <div className="banner-final">
         <img src={footerBanner} alt="Te espero Cata" className="footer-banner-img" />
       </div>

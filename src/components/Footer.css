@@ -1,51 +1,51 @@
 .footer-container {
   text-align: center;
   background-color: #a66c6c;
-  /* Un color oscuro para cerrar elegante */
   color: white;
   padding: 40px 20px 20px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  /* Sin position ni z-index raros, para que los marcos pasen por encima naturalmente */
 }
 
 .footer-banner-img {
-  max-width: 80%;
+  max-width: 100%;
   height: auto;
   display: block;
   margin: 0 auto;
   animation: latido 1.5s ease-in-out infinite;
+  /* La animación de latido tiene un "transform" interno que hace que mágicamente la imagen pase al frente del collage */
 }
 
+/* --- BOTÓN RÚSTICO INTACTO --- */
 .btn-up {
   display: inline-block;
-  background-color: #fffaf0; /* Fondo color papel viejo / crema sutil */
-  color: #222222; /* Texto oscuro */
-  border: 3px solid #222222; /* Borde oscuro bien marcado */
+  background-color: #fffaf0; 
+  color: #222222; 
+  border: 3px solid #222222; 
   padding: 12px 25px;
-  border-radius: 12px 6px 15px 4px; /* Asimetría estilo sticker recortado */
-  font-family: 'Special Elite', cursive !important; /* Aseguramos tu tipografía de máquina */
+  border-radius: 12px 6px 15px 4px; 
+  font-family: 'Special Elite', cursive !important; 
   font-weight: bold;
   font-size: clamp(0.85rem, 0.5rem + 0.6vw, 1rem);
   cursor: pointer;
-  box-shadow: 5px 5px 0px #222222; /* Sombra sólida dura */
+  box-shadow: 5px 5px 0px #222222; 
   transition: all 0.3s ease;
-  transform: rotate(1.2deg); /* Una leve inclinación para jugar con el rsvp */
+  transform: rotate(1.2deg); 
   margin-top: 5px;
 }
 
-/* Hover interactivo igual a todos los botones de la web */
 .btn-up:hover {
-  transform: rotate(-1deg) scale(1.03); /* Gira hacia el otro lado y crece un toque */
-  background-color: #fff0f5; /* Tonalidad rosada muy suave */
-  box-shadow: 7px 7px 0px #e68a9c; /* Sombra rosa vibrante de la paleta */
+  transform: rotate(-1deg) scale(1.03); 
+  background-color: #fff0f5; 
+  box-shadow: 7px 7px 0px #e68a9c; 
   color: #222222;
 }
 
-/* Efecto al hacer clic con el dedo */
 .btn-up:active {
-  transform: translate(3px, 3px) rotate(0deg); /* Se hunde eliminando el espacio */
+  transform: translate(3px, 3px) rotate(0deg); 
   box-shadow: 2px 2px 0px #222222;
 }
 

@@ -7,25 +7,36 @@
   bottom: 20px;
   right: 20px;
   z-index: 1000;
-  background: #a66c6c;
-  color: white;
-  border: 2px solid white;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 1.4rem;
+  background-color: #fffaf0; 
+  color: #222222; 
+  border: 3px solid #222222; 
+  /* Acá está la magia: un círculo imperfecto cortado a mano */
+  border-radius: 50% 40% 60% 45%; 
+  
+  width: 55px; 
+  height: 55px;
+  font-size: 1.6rem;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 4px 0px #222222; 
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: rotate(-5deg); /* Leve inclinación artística */
 }
 
 .btn-musica:hover {
-  background: #834444;
-  transform: scale(1.1);
+  background-color: #fff0f5; 
+  transform: rotate(5deg) scale(1.05); /* Gira un poquito hacia el otro lado y crece */
+  box-shadow: 5px 5px 0px #e68a9c; 
+  color: #222222;
 }
+
+.btn-musica:active {
+  transform: translate(3px, 3px) rotate(0deg); 
+  box-shadow: 1px 1px 0px #222222;
+}
+
 /* EL CONTENEDOR PADRE */
 .contenedor-stickers-pegajosos {
   position: sticky;
@@ -34,7 +45,6 @@
   margin-bottom: -100vh;
   width: 100%;
   pointer-events: none;
-  z-index: 0;
   overflow-x: hidden; 
 }
 
@@ -45,11 +55,9 @@
   height: 100vh; 
   width: 70%; 
   object-fit: cover;
-  z-index: 50;
   pointer-events: none; 
 }
 
-/* MARCOS INTACTOS (Sin empujarlos afuera) */
 .marco-izquierdo {
   left: 0; 
   object-position: left center; 
@@ -59,16 +67,26 @@
   object-position: right center;
 }
 
-/* TU BRILLANTE SOLUCIÓN PARA LAS CAJAS */
+.caja-datos {
+  margin: 15px auto; 
+  width: 70%; 
+  max-width: 600px;
+  border-radius: 15px;
+}
+
+/* ORDEN DE LAS CAPAS */
+
+
+.contenedor-stickers-pegajosos {
+  z-index: 2 !important; 
+}
+
 .caja-datos {
   position: relative;
-  z-index: 10;
-  margin: 15px auto; /* Un poquito más de margen arriba/abajo para separar las cajas */
-  
-  /* 👇 TU REGLA DE ORO 👇 */
-  width: 70%; /* Te lo subí un pelín a 78% para que el texto respire mejor en celus chicos, podés probar entre 70% y 80% */
-  max-width: 600px;
-  
-  border-radius: 15px;
-  /* Sacamos el padding de acá porque cada componente lo maneja por dentro */
+  z-index: 3; 
+}
+
+.footer-banner-img {
+  position: relative;
+  z-index: 5 !important; /* Gana por goleada y pasa por encima del collage */
 }

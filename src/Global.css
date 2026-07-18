@@ -164,3 +164,40 @@ img {
   }
 
 }
+
+/* ==========================================================================
+   EFECTO WASHI TAPE (CINTA ADHESIVA)
+   ========================================================================== */
+.estilo-elegante {
+  position: relative; /* Clave para que la cinta se pegue al borde de la caja */
+}
+
+/* Cinta rosa translúcida principal */
+.estilo-elegante::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 120px;
+  height: 30px;
+  background-color: rgba(230, 138, 156, 0.4); /* Rosa de tu paleta, medio transparente */
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  /* El clip-path le da ese borde apenas rasgado/chueco de la cinta cortada a mano */
+  clip-path: polygon(2% 0, 100% 2%, 98% 100%, 0 98%); 
+}
+
+/* Segunda cinta cruzada abajo para más textura (opcional) */
+.estilo-elegante::after {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 48%;
+  transform: translateX(-50%) rotate(3deg);
+  width: 100px;
+  height: 25px;
+  background-color: rgba(244, 239, 230, 0.8); /* Crema rústico */
+  z-index: 9;
+  border-radius: 2px;
+}
