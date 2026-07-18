@@ -90,6 +90,9 @@ img {
   max-width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.05);
+  /* Mini volumen sutil */
+
 }
 
 
@@ -169,7 +172,8 @@ img {
    EFECTO WASHI TAPE (CINTA ADHESIVA)
    ========================================================================== */
 .estilo-elegante {
-  position: relative; /* Clave para que la cinta se pegue al borde de la caja */
+  position: relative;
+  /* Clave para que la cinta se pegue al borde de la caja */
 }
 
 /* Cinta rosa translúcida principal */
@@ -181,11 +185,12 @@ img {
   transform: translateX(-50%) rotate(-2deg);
   width: 120px;
   height: 30px;
-  background-color: rgba(230, 138, 156, 0.4); /* Rosa de tu paleta, medio transparente */
+  background-color: rgba(230, 138, 156, 0.4);
+  /* Rosa de tu paleta, medio transparente */
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   z-index: 10;
   /* El clip-path le da ese borde apenas rasgado/chueco de la cinta cortada a mano */
-  clip-path: polygon(2% 0, 100% 2%, 98% 100%, 0 98%); 
+  clip-path: polygon(2% 0, 100% 2%, 98% 100%, 0 98%);
 }
 
 /* Segunda cinta cruzada abajo para más textura (opcional) */
@@ -197,7 +202,20 @@ img {
   transform: translateX(-50%) rotate(3deg);
   width: 100px;
   height: 25px;
-  background-color: rgba(244, 239, 230, 0.8); /* Crema rústico */
+  background-color: rgba(244, 239, 230, 0.8);
+  /* Crema rústico */
   z-index: 9;
   border-radius: 2px;
+}
+
+/* Animación para que las cajas aparezcan al hacer scroll */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

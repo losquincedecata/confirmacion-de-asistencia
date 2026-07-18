@@ -64,6 +64,26 @@ function App() {
     window.open(url, "_blank");
   };
 
+  // Agregá esto dentro de tu función App()
+useEffect(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  // Seleccionamos todas las secciones con la clase .estilo-elegante
+  const elementos = document.querySelectorAll('.estilo-elegante');
+  elementos.forEach((el) => {
+    el.classList.add('fade-in-up'); // Les agregamos la clase de animación
+    observer.observe(el);           // Empezamos a observarlas
+  });
+
+  return () => observer.disconnect();
+}, []);
+
   return (
     <div className="app-container" onClick={iniciarMusica}>
       <audio ref={audioRef} src={temaMusical} loop />
