@@ -1,91 +1,81 @@
-.gifts-container {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: #ffffff;
-  font-family: sans-serif;
-}
+/* ==========================================================================
+   SECCIÓN REGALOS (ESTILO COLLAGE SCRAPBOOK)
+   ========================================================================== */
 
-.gifts-content {
-  padding: 30px;
-  box-sizing: border-box;
-  border: 2px solid #f0f0f0;
-  border-radius: 15px;
-  background-color: #fafafa;
-}
-
-.gifts-content h2 {
-  font-family: 'Special Elite', cursive !important;
-  font-size: clamp(1.4rem, 0.8rem + 2.25vw, 3.5rem) !important;
-  /* Estilo elegante aplicado */
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.gifts-subtitle {
-  color: #666;
-  max-width: 600px;
-  margin: 0 auto 40px auto;
-  line-height: 1.5;
-}
-
-/* Ajuste para que la grilla sea flexible y centrada */
-.grilla-regalos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.btn-regalo {
-  background-color: #f8f9fa;
-  border: 2px dashed #ccc;
-  border-radius: 15px;
-  padding: 20px 10px;
-  width: 100%;
-  /* Ocupa el espacio del grid */
+.seccion-regalos {
+  padding: 40px 0;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+/* La cajita blanca unificada y limpia 🤍 */
+.gifts-content {
+  background-color: #ffffff; /* Blanco pleno para que resalte */
+  padding: 35px 25px;
+  border-radius: 20px; /* Combinando con tus otras tarjetas */
+  width: 100%;
+  max-width: 500px; /* Tamaño ideal PC y Celu */
+  margin: 0 auto;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.05); /* Mini volumen sutil */
+}
+
+/* Contenedor del Botón Lunar */
+.contenedor-regalo-unico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  perspective: 1000px; /* Profundidad 3D */
+}
+
+/* El Botón Cohete - Estilo Recorte de Revista */
+.btn-regalo-lunar {
+  background-color: #fffaf0; /* Color papel hueso/crema */
+  border: 3px solid #222; /* Borde marcado */
+  padding: 20px 30px;
+  border-radius: 12px 4px 15px 5px; /* Asimetría hecha a mano */
+  font-family: 'Special Elite', cursive; /* Tu tipografía de máquina */
+  color: #222;
   cursor: pointer;
-  margin: 0;
+  box-shadow: 5px 5px 0px #222; /* Sombra sólida dura */
+  transition: all 0.3s ease;
+  transform: rotate(-2deg); /* Inclinación artística */
+  max-width: 85%;
 }
 
-.btn-regalo:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  border-color: #009ee3;
+/* Efectos interactivos */
+.btn-regalo-lunar:hover {
+  transform: rotate(1deg) scale(1.03);
+  background-color: #fff0f5; /* Rosa sutil */
+  box-shadow: 7px 7px 0px #e68a9c; /* Sombra rosa */
 }
 
-.gift-icon-img {
-  width: 80px;
-  height: auto;
+.btn-regalo-lunar:active {
+  transform: translate(3px, 3px) rotate(0deg); /* Efecto hundirse */
+  box-shadow: 2px 2px 0px #222;
+}
+
+.btn-regalo-lunar span {
+  font-size: 2.5rem;
   display: block;
-  margin: 0 auto 20px auto;
-  animation: latido 1.5s ease-in-out infinite;
+  margin-bottom: 8px;
 }
 
-.btn-regalo h3 {
-  font-size: 1.1rem;
-  color: #333;
-  margin: 0 0 5px 0;
-}
-
-.btn-regalo p {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #009ee3;
+.btn-regalo-lunar h3 {
+  font-size: 1.2rem;
   margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* Reset de fuentes para los botones */
-.gifts-content .btn-regalo,
-.gifts-content .btn-regalo h3,
-.gifts-content .btn-regalo p,
-.gifts-content p {
-  font-family: 'Special Elite', cursive !important;
-  text-transform: none;
-}
+
+/* ==========================================================================
+   ESTILOS DEL MODAL (EL CARTEL FLOTANTE)
+   ========================================================================== */
 
 .modal-overlay {
   position: fixed;
@@ -93,45 +83,102 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 9999;
+  backdrop-filter: blur(3px);
 }
 
 .modal-contenido {
-  background: white;
-  padding: 2rem;
-  border-radius: 15px;
+  background-color: #ffffff;
+  border: 4px solid #222;
+  padding: 30px 25px;
+  width: 85%;
+  max-width: 380px;
+  border-radius: 8px;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2);
   text-align: center;
-  max-width: 400px;
-  width: 90%;
+  position: relative;
+  transform: rotate(1deg);
+  animation: entradaModal 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.caja-alias {
-  background: #f0f0f0;
-  padding: 1rem;
-  margin: 1rem 0;
-  border-radius: 8px;
+@keyframes entradaModal {
+  from { transform: scale(0.8) rotate(-5deg); opacity: 0; }
+  to { transform: scale(1) rotate(1deg); opacity: 1; }
+}
+
+.caja-transferencia {
+  background-color: #f9f9f9;
+  border: 2px dashed #777; /* Línea de puntos para recortar */
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 6px;
+}
+
+.item-copiar {
+  padding: 10px;
+  margin: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.item-copiar:hover {
+  background-color: #fff0f5;
+  border-color: #e68a9c;
+}
+
+.item-copiar p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.aviso-copiado {
+  background-color: #e68a9c;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  animation: popAviso 0.3s ease;
+}
+
+@keyframes popAviso {
+  0% { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 .btn-cerrar {
-  display: inline-block;
-  background-color: #a66c6c;
-  color: white;
-  border: 2px solid white;
-  padding: 12px 30px;
-  border-radius: 30px;
-  font-weight: bold;
-  font-size: clamp(0.85rem, 0.5rem + 0.7vw, 1.1rem);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin-top: 10px;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
   font-family: 'Special Elite', cursive;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: background 0.2s;
+  width: 100%;
 }
 
 .btn-cerrar:hover {
-  background-color: #834444;
+  background-color: #444;
+}
+
+/* Ajuste fino móvil */
+@media (max-width: 600px) {
+  .gifts-content {
+    width: 78%; /* Sincronizado con el ancho de tarjeta del resto de la invitación */
+    padding: 20px;
+  }
 }

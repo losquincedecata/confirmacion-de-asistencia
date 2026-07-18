@@ -2,20 +2,26 @@ import { useState } from 'react';
 import './Gifts.css';
 import giftImg from '../assets/icono-regalo.svg'; // Importación de la imagen
 
-const regalos = [
-  { id: 1, titulo: "Cabalgata por la playa", monto: "$30.000", icono: "🐎", alias: "micaela.za", cvu: "0000003100015137881806" },
-  { id: 2, titulo: "Balde de Nutella", monto: "$50.000", icono: "🍫", alias: "micaela.za", cvu: "0000003100015137881806" },
-  { id: 3, titulo: "Oso Panda Gigante", monto: "$70.000", icono: "🐼", alias: "micaela.za", cvu: "0000003100015137881806" },
-  { id: 4, titulo: "Financiar mi viaje a la luna", monto: "$100.000", icono: "🚀", alias: "micaela.za", cvu: "0000003100015137881806" },
-];
+// Dejamos configurados solo los datos esenciales de tu misión lunar 🌕
+const datosTransferencia = {
+  titulo: "Financiar mi viaje a la luna",
+  alias: "micaela.za",
+  cvu: "0000003100015137881806"
+};
 
 function Gifts() {
   const [modalAbierto, setModalAbierto] = useState(false);
-  const [regaloSeleccionado, setRegaloSeleccionado] = useState(null);
+  const [copiadoTexto, setCopiadoTexto] = useState(""); // Estado para el aviso de copiado
 
-  const abrirModal = (regalo) => {
-    setRegaloSeleccionado(regalo);
-    setModalAbierto(true);
+  // Función mágica para copiar los datos automáticamente al portapapeles
+  const copiarAlPortapapeles = (texto, tipo) => {
+    navigator.clipboard.writeText(texto);
+    setCopiadoTexto(`¡${tipo} copiado!`);
+    
+    // El cartelito flotante desaparece solo después de 2 segundos
+    setTimeout(() => {
+      setCopiadoTexto("");
+    }, 2000);
   };
 
   return (
@@ -23,29 +29,38 @@ function Gifts() {
       <div className='gifts-content estilo-elegante'>
         <h2>Regalos</h2>
         <img src={giftImg} alt="Regalo" className="gift-icon-img" />
-        <p>Lo más importante es tu presencia,</p>
-        <p>pero te dejo algunas ideas... </p>
-        <br></br>
-        <div className="grilla-regalos">
-          {regalos.map((regalo) => (
-            <button key={regalo.id} onClick={() => abrirModal(regalo)} className="btn-regalo">
-              <span>{regalo.icono}</span>
-              <h3>{regalo.titulo}</h3>
-              <p>{regalo.monto}</p>
-            </button>
-          ))}
+        <p>¡Mi regalo favorito es compartir esta noche con vos!✨</p>
+        <p>Si igual querés mimarme un poquito, </p>
+        <p>podés dejar tu regalo en el salón o colaborar con mi misión espacial...</p>
+        <br />
+        
+        {/* Un único botón estelar centrado y sin monto */}
+        <div className="contenedor-regalo-unico">
+          <button onClick={() => setModalAbierto(true)} className="btn-regalo-lunar">
+            <span>🚀</span>
+            <h3>Financiar mi viaje a la luna</h3>
+          </button>
         </div>
 
         {modalAbierto && (
           <div className="modal-overlay" onClick={() => setModalAbierto(false)}>
             <div className="modal-contenido" onClick={(e) => e.stopPropagation()}>
-              <h3>{regaloSeleccionado.titulo}</h3>
-              <p>Monto sugerido: <strong>{regaloSeleccionado.monto}</strong></p>
-              <p>Datos para transferencia:</p>
-              <div className="caja-alias">
-                <p>Alias: <strong>{regaloSeleccionado.alias}</strong></p>
-                <p>CVU: <strong>{regaloSeleccionado.cvu}</strong></p>
+              <h3>{datosTransferencia.titulo}</h3>
+              <p>Hacé clic sobre los datos para copiarlos:</p>
+              
+              {/* Al hacer clic en cualquiera de estos divs, se copia el dato al instante */}
+              <div className="caja-transferencia">
+                <div className="item-copiar" onClick={() => copiarAlPortapapeles(datosTransferencia.alias, "Alias")}>
+                  <p>Alias: <strong>{datosTransferencia.alias}</strong> 📋</p>
+                </div>
+                <div className="item-copiar" onClick={() => copiarAlPortapapeles(datosTransferencia.cvu, "CVU")}>
+                  <p>CVU: <strong>{datosTransferencia.cvu}</strong> 📋</p>
+                </div>
               </div>
+
+              {/* Si el invitado copió algo, acá sale el aviso flotante (¡Alias copiado! / ¡CVU copiado!) */}
+              {copiadoTexto && <div className="aviso-copiado">{copiadoTexto}</div>}
+              
               <button onClick={() => setModalAbierto(false)} className="btn-cerrar">Cerrar</button>
             </div>
           </div>
