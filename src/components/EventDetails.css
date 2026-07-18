@@ -55,7 +55,7 @@
   margin-top: 10px;
   width: 100%;
 }
-@media (max-width: 600px) {
+
 .flip-card {
   background: #f2e5e5;
   color: rgb(54, 53, 53);
@@ -84,7 +84,14 @@
   text-transform: uppercase;
   color: rgb(54, 53, 53);
 }
+
+@media (max-width: 600px) {
+  .flip-card {
+    min-width: 50px;
+    padding: 7px;
+  }
 }
+
 .party-icon-img {
   width: 100px;
   height: auto;
