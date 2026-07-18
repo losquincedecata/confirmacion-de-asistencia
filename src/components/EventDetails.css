@@ -23,28 +23,37 @@
   color: #333;
 }
 
-/* Botón estilo 'píldora' heredado de btn-llegar */
 .btn-calendario {
   display: inline-block;
-  background-color: #a66c6c;
-  color: white;
-  border: 2px solid white;
+  background-color: #fffaf0; /* Fondo color papel viejo / crema sutil */
+  color: #222222; /* Texto oscuro */
+  border: 3px solid #222222; /* Borde oscuro bien marcado */
   text-decoration: none;
   padding: 15px 30px;
-  border-radius: 30px;
-  font-family: 'Special Elite', cursive;
+  border-radius: 12px 4px 15px 5px; /* Bordes asimétricos desparejos */
+  font-family: 'Special Elite', cursive !important; /* Mantiene tu tipografía de máquina */
   font-weight: bold;
   font-size: clamp(0.85rem, 0.5rem + 0.7vw, 1.1rem);
   cursor: pointer;
+  box-shadow: 5px 5px 0px #222222; /* Sombra sólida y dura estilo cómic */
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: rotate(-1.5deg); /* Un toque inclinado sutil */
   margin-bottom: 25px;
 }
 
+/* Hover interactivo exacto al lunar */
 .btn-calendario:hover {
-  background-color: #834444;
+  transform: rotate(1deg) scale(1.03); /* Gira levemente y crece */
+  background-color: #fff0f5; /* Tonalidad rosada muy suave */
+  box-shadow: 7px 7px 0px #e68a9c; /* Sombra rosa vibrante */
+  color: #222222;
 }
 
+/* Efecto al clickear: se hunde y la sombra se achica */
+.btn-calendario:active {
+  transform: translate(3px, 3px) rotate(0deg);
+  box-shadow: 2px 2px 0px #222222;
+}
 /* Ajuste del contador para que se vea bien dentro del contenedor claro */
 .flip-clock {
   display: flex;

@@ -42,22 +42,33 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.btn-llegar {
+.location-content button, .btn-llegar {
   display: inline-block;
-  background-color: #a66c6c;
-  color: white;
-  border: 2px solid white;
-  text-decoration: none;
+  background-color: #fffaf0; /* Fondo color papel viejo / crema sutil */
+  color: #222222;
+  border: 3px solid #222222; /* Borde oscuro bien marcado */
   padding: 15px 30px;
-  border-radius: 30px;
-  font-family: 'Special Elite', cursive;
+  border-radius: 15px 5px 12px 4px; /* Asimetría hecha a mano */
+  font-family: 'Special Elite', cursive !important; /* Tu tipografía de máquina */
   font-weight: bold;
-  font-size: clamp(0.85rem, 0.5rem + 0.7vw, 1.1rem);
+  font-size: 1rem;
   cursor: pointer;
+  box-shadow: 5px 5px 0px #222222; /* Sombra sólida y dura */
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: rotate(1.5deg); /* Este lo inclinamos sutilmente hacia el otro lado */
+  margin-top: 20px;
 }
 
-.btn-llegar:hover {
-  background-color: #834444;
+/* Hover interactivo exacto al lunar */
+.location-content button:hover, .btn-llegar:hover {
+  transform: rotate(-1deg) scale(1.03);
+  background-color: #fff0f5;
+  box-shadow: 7px 7px 0px #e68a9c;
+  color: #222222;
+}
+
+/* Efecto al clickear */
+.location-content button:active, .btn-llegar:active {
+  transform: translate(3px, 3px) rotate(0deg);
+  box-shadow: 2px 2px 0px #222222;
 }

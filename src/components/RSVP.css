@@ -74,25 +74,37 @@ input[type="text"],
   cursor: pointer;
 }
 
-.btn-enviar {
+.btn-enviar, .rsvp-form button {
   display: inline-block;
-  width: 100%;
-  background-color: #a66c6c;
-  color: white;
-  border: 2px solid white;
-  padding: 15px;
-  border-radius: 30px;
-  font-family: 'Special Elite', cursive;
+  background-color: #fffaf0; /* Fondo color papel viejo / crema sutil */
+  color: #222222; /* Texto oscuro */
+  border: 3px solid #222222; /* Borde oscuro bien marcado */
+  padding: 15px 30px;
+  border-radius: 4px 12px 3px 15px; /* Asimetría hecha a mano (estilo sticker) */
+  font-family: 'Special Elite', cursive !important; /* Forzamos tu tipografía de máquina */
   font-weight: bold;
-  font-size: clamp(0.85rem, 0.5rem + 0.7vw, 1.1rem);
+  font-size: 1.1rem;
   cursor: pointer;
+  box-shadow: 5px 5px 0px #222222; /* Sombra sólida dura */
   transition: all 0.3s ease;
-  margin-top: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: rotate(-1.2deg); /* Inclinación artística hacia la izquierda */
+  width: 100%; /* Ocupa todo el ancho del formulario */
+  box-sizing: border-box; /* Evita que el padding rompa el ancho */
+  margin-top: 15px;
 }
 
-.btn-enviar:hover {
-  background-color: #834444;
+/* Hover interactivo idéntico a Gifts, Calendario y Ubicación */
+.btn-enviar:hover, .rsvp-form button:hover {
+  transform: rotate(1deg) scale(1.02); /* Gira levemente y crece un poquito */
+  background-color: #fff0f5; /* Tonalidad rosada muy suave */
+  box-shadow: 7px 7px 0px #e68a9c; /* Sombra rosa vibrante de la paleta */
+  color: #222222;
+}
+
+/* Efecto al hacer clic en el celu o compu */
+.btn-enviar:active, .rsvp-form button:active {
+  transform: translate(3px, 3px) rotate(0deg); /* Se hunde y simula el botón real */
+  box-shadow: 2px 2px 0px #222222;
 }
 
 .mensaje-exito {

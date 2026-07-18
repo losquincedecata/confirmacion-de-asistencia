@@ -19,20 +19,34 @@
 }
 
 .btn-up {
-  background-color: #834444;
-  color: white;
-  border: 2px solid white;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-family: 'Special Elite', cursive;
+  display: inline-block;
+  background-color: #fffaf0; /* Fondo color papel viejo / crema sutil */
+  color: #222222; /* Texto oscuro */
+  border: 3px solid #222222; /* Borde oscuro bien marcado */
+  padding: 12px 25px;
+  border-radius: 12px 6px 15px 4px; /* Asimetría estilo sticker recortado */
+  font-family: 'Special Elite', cursive !important; /* Aseguramos tu tipografía de máquina */
+  font-weight: bold;
   font-size: clamp(0.85rem, 0.5rem + 0.6vw, 1rem);
   cursor: pointer;
+  box-shadow: 5px 5px 0px #222222; /* Sombra sólida dura */
   transition: all 0.3s ease;
+  transform: rotate(1.2deg); /* Una leve inclinación para jugar con el rsvp */
+  margin-top: 5px;
 }
 
+/* Hover interactivo igual a todos los botones de la web */
 .btn-up:hover {
-  background-color: white;
-  color: #1a1a1a;
+  transform: rotate(-1deg) scale(1.03); /* Gira hacia el otro lado y crece un toque */
+  background-color: #fff0f5; /* Tonalidad rosada muy suave */
+  box-shadow: 7px 7px 0px #e68a9c; /* Sombra rosa vibrante de la paleta */
+  color: #222222;
+}
+
+/* Efecto al hacer clic con el dedo */
+.btn-up:active {
+  transform: translate(3px, 3px) rotate(0deg); /* Se hunde eliminando el espacio */
+  box-shadow: 2px 2px 0px #222222;
 }
 
 .footer-credits {
